@@ -27,11 +27,16 @@
         margin-block-start: 20px;
         margin-block-end: 20px;
       }
+    </style class="bubbles">
+    <style>
       p.text_quote {
         margin-block-start: 10px;
         margin-inline-start: 10px;
         margin-block-end: 2px;
         font-style: italic;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
       }
       p.author_text_quote {
         margin-block-start: unset;
@@ -51,6 +56,15 @@
         font-weight: bold;
         margin-block-start: 10px;
         margin-inline-end: 10px;
+      }
+      div.bubble_custom {
+        border-radius: 15px;
+        border-width: 4px;
+        border-style: solid;
+        margin: 20px;
+        padding: 0.1px;
+        display: flex;
+        align-items: center;
       }
       div.bubble_warn {
         background: #ff9900;
@@ -90,6 +104,9 @@
         width: 40px;
         padding: 10px;
       }
+      img.quote_img {
+        margin-right: 10px;
+      }
     </style>
   </head>
   <body style="font-family: Noto Sans; margin: 0;">
@@ -112,7 +129,10 @@
         <p style="font-size: 50px;">Тестовый контент:</p>
       </center>
       <div class="bubble_quote">
-        <p class="text_quote">Это пример цитаты</p>
+        <p class="text_quote">
+          <img class="quote_img" src="https://dden4ik-12.github.io/website assets/black-quote-icon.svg">
+          Это пример цитаты
+        </p>
         <p class="author_text_quote">Источник</p>
       </div>
       <div class="bubble_tip">
