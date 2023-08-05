@@ -18,11 +18,11 @@
                 <span class="ModalExtension-TextContentGroup" id="ModalExtension-TextContentGroup" style="display: flex;text-align: start;flex-direction: column;align-items: start;margin-block: 10px;">
                   You want to open a new tab with the URL:
                 </span>
-                <span class="ModalExtension-TextContentGroup" id="ModalExtension-TextContentGroup" style="display: flex;text-align: start;flex-direction: column;align-items: start;margin-block: 10px;font-family: monospace;font-size: 15px;">
-                  "https://extensions.turbowarp.org/"
+                <span class="ModalExtension-TextContentGroup Url" id="ModalExtension-TextContentGroup" style="display: flex;text-align: start;flex-direction: column;align-items: start;margin-block: 10px;font-family: monospace;font-size: 15px;">
+                  "site"
                 </span>
                 <span class="ModalExtension-TextContentGroup" id="ModalExtension-TextContentGroup" style="display: flex;text-align: start;flex-direction: column;align-items: start;margin-block: 10px;">
-                  The site being opened has not been reviewed by the TurboWarp developers and the developer of the "Modals" extension.
+                  The website being opened has not been reviewed by the TurboWarp developers and the developer of the "Modals" extension.
                 </span>
                 <span class="ModalExtension-TextContentGroup" id="ModalExtension-TextContentGroup" style="display: flex;text-align: start;flex-direction: column;align-items: start;margin-block: 10px;">
                   It may contain dangerous or malicious code.
@@ -38,8 +38,8 @@
         return new URLSearchParams(location.search).get(ID.toString()) || ""
       };
 
-      const packaged = SearchParam(package);
-      const site_url = SearchParam(url);
+      const packaged = SearchParam('package');
+      const site_url = SearchParam('url');
 
       if (packaged === 0) {
         const text_url = getElementsByClassName(Url);
