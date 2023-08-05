@@ -181,6 +181,12 @@
         b1.style.width = '100%';
         b1.style.border = '2px solid #e55353';
         b1.style.justifyContent = 'center';
+        b1.style.cursor = 'pointer';
+        b1.addEventListener('click', (e) => {
+          if (e.target === b1) {
+            window.close()
+          }
+        });
         bcg.appendChild(b1);
 
         const b2 = document.createElement('div');
@@ -198,6 +204,12 @@
         b2.style.width = '100%';
         b2.style.border = '2px solid #1fb30e';
         b2.style.justifyContent = 'center';
+        b2.style.cursor = 'pointer';
+        b2.addEventListener('click', (e) => {
+          if (e.target === b2) {
+            window.location.href = site_url;
+          }
+        });
         bcg.appendChild(b2);
         
         document.body.appendChild(rmp);
