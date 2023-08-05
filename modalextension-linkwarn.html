@@ -3,50 +3,112 @@
   <head>
     <title>Modals: Extension Security</title>
   </head>
-  <body style="background-color: #ff4c4cba;"> 
-    <div class="ModalExtension-ReactModalPortal" id="ModalExtension-ReactModalPortal">
-      <div class="ModalExtension-ReactModalOverlay" id="ModalExtension-ReactModalOverlay" style="position: fixed;inset: 0px;z-index: 510;display: flex;align-items: start;">
-        <div class="ModalExtension-ReactModalContent" id="ModalExtension-ReactModalContent" role="dialog" aria-label="Modal" style="font-family: Arial;width: 500px;margin: 50px auto;outline: none;border: 4px solid #ffffff40;padding: 0px;border-radius: 0.5rem;user-select: none;color: rgba(255, 255, 255, 0.25);overflow: hidden;">
-          <div class="ModalExtension-Box" id="ModalExtension-Box" dir="ltr">
-            <div class="ModalExtension-ModalHeader" id="ModalExtension-ModalHeader" style="display: flex;height: 5rem;width: 100%;background-color: rgb(255 76 76);font-size: 2rem;font-weight: bold;">
-              <div class="ModalExtension-ModalHeaderTitle" id="ModalExtension-ModalHeaderTitle" style="font-family: Arial;flex-grow: 1;flex-shrink: 0;justify-content: center;user-select: none;letter-spacing: 0.4px;cursor: default;display: flex;padding: 1rem;text-decoration: none;color: rgb(255, 255, 255);flex-direction: column;align-items: stretch;text-align: center;">
-                Extension Security
-              </div>
-            </div>
-            <div class="ModalExtension-ModalBody" id="ModalExtension-ModalBody" style="color: rgb(87, 94, 117);background-color: rgb(255, 255, 255);padding: 0.5rem 1.5rem;">
-              <div class="ModalExtension-TextContentGroup" id="ModalExtension-TextContentGroup">
-                <span class="ModalExtension-TextContentGroup" id="ModalExtension-TextContentGroup" style="display: flex;text-align: start;flex-direction: column;align-items: start;margin-block: 10px;">
-                  You want to open a new tab with the URL:
-                </span>
-                <span class="ModalExtension-TextContentGroup Url" id="ModalExtension-TextContentGroup" style="display: flex;text-align: start;flex-direction: column;align-items: start;margin-block: 10px;font-family: monospace;font-size: 15px;">
-                  "site"
-                </span>
-                <span class="ModalExtension-TextContentGroup" id="ModalExtension-TextContentGroup" style="display: flex;text-align: start;flex-direction: column;align-items: start;margin-block: 10px;">
-                  The website being opened has not been reviewed by the TurboWarp developers and the developer of the "Modals" extension.
-                </span>
-                <span class="ModalExtension-TextContentGroup" id="ModalExtension-TextContentGroup" style="display: flex;text-align: start;flex-direction: column;align-items: start;margin-block: 10px;">
-                  It may contain dangerous or malicious code.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <body style="background-color: #ff4c4cba;font-family: Arial"> 
     <script>
-      const SearchParam = (ID) => {
-        return new URLSearchParams(location.search).get(ID.toString()) || ""
-      };
+      const rmp = document.createElement('div');
+      rmp.className = 'ModalExtension-ReactModalPortal';
+      rmp.id = 'ModalExtension-ReactModalPortal';
 
-      const packaged = SearchParam('package');
-      const site_url = SearchParam('url');
+      const rmo = document.createElement('div');
+      rmo.className = 'ModalExtension-ReactModalOverlay';
+      rmo.id = 'ModalExtension-ReactModalOverlay';
+      rmo.style.position = 'fixed';
+      rmo.style.top = '0';
+      rmo.style.left = '0';
+      rmo.style.right = '0';
+      rmo.style.bottom = '0';
+      rmo.style.zIndex = '510';
+      rmo.style.display = 'flex';
+      rmo.style.alignItems = 'start';
+      rmo.style.backgroundColor = '#ff4c4cdf';
+      rmp.appendChild(rmo);
 
-      if (packaged === 0) {
-        const text_url = getElementsByClassName(Url);
-        text_url.textContent = `"${site_url}"`;
-      } else if (packaged === 1) {
-        openWindow(site_url);
-      };
+      const rmc = document.createElement('div');
+      rmc.className = 'ModalExtension-ReactModalContent';
+      rmc.id = 'ModalExtension-ReactModalContent';
+      rmc.style.fontFamily = 'Arial';
+      rmc.tabindex = '-1';
+      rmc.role = 'dialog';
+      rmc.ariaLabel = 'Extension Security';
+      rmc.style.width = '500';
+      rmc.style.marginTop = '25px';
+      rmc.style.margin = '50px auto';
+      rmc.style.outline = 'none';
+      rmc.style.border = '4px solid hsla(0, 100%, 100%, 0.25)';
+      rmc.style.padding = '0';
+      rmc.style.borderRadius = '0.5rem';
+      rmc.style.userSelect = 'none';
+      rmc.style.color = '#ffffff40';
+      rmc.style.overflow = 'hidden';
+      rmo.appendChild(rmc);
+
+      const box = document.createElement('div');
+      box.className = 'ModalExtension-Box';
+      box.id = 'ModalExtension-Box';
+      box.dir = 'ltr';
+      box.style.boxSizing = 'borderBox';
+      rmc.appendChild(box);
+
+      const mh = document.createElement('div');
+      mh.className = 'ModalExtension-ModalHeader';
+      mh.id = 'ModalExtension-ModalHeader';
+      mh.style.display = 'flex';
+      mh.style.justifyContent = 'flexStart';
+      mh.style.height = '5rem';
+      mh.style.boxSizing = 'borderBox';
+      mh.style.width = '100%';
+      mh.style.backgroundColor = '#ff4c4c';
+      mh.style.fontSize = '2rem';
+      mh.style.fontWeight = 'bold';
+      box.appendChild(mh);
+
+      const mht = document.createElement('div');
+      mht.className = 'ModalExtension-ModalHeaderTitle';
+      mht.id = 'ModalExtension-ModalHeaderTitle';
+      mht.textContent = 'Extension Security';
+      mht.style.fontFamily = 'Arial';
+      mht.style.textAlign = 'center';
+      mht.style.flexGrow = '1';
+      mht.style.flexShrink = '0';
+      mht.style.boxSizing = 'borderBox';
+      mht.style.justifyContent = 'center';
+      mht.style.userSelect = 'none';
+      mht.style.letterSpacing = '0.4px';
+      mht.style.cursor = 'default';
+      mht.style.display = 'flex';
+      mht.style.alignItems = 'stretch';
+      mht.style.padding = '1rem';
+      mht.style.textDecoration = 'none';
+      mht.style.color = '#ffffff';
+      mh.appendChild(mht);
+
+      const mb = document.createElement('div');
+      mb.className = 'ModalExtension-ModalBody';
+      mb.id = 'ModalExtension-ModalBody';
+      mb.style.color = '#575e75';
+      mb.style.backgroundColor = '#ffffff';
+      mb.style.padding = '1rem 1.5rem';
+      mb.style.boxSizing = 'borderBox';
+      box.appendChild(mb);
+
+      const tcg1 = document.createElement('div');
+      tcg1.className = 'ModalExtension-TextContentGroup';
+      tcg1.id = 'ModalExtension-TextContentGroup';
+      tcg1.style.boxSizing = 'borderBox';
+      mb.appendChild(tcg1);
+
+      const st1 = document.createElement('span');
+      st1.className = 'ModalExtension-TextContentGroup';
+      st1.id = 'ModalExtension-TextContentGroup';
+      st1.textContent = CONTENT;
+      st1.style.boxSizing = 'borderBox';
+      st1.style.display = 'flex';
+      st1.style.textAlign = 'start';
+      st1.style.flexDirection = 'column';
+      st1.style.alignItems = 'start';
+      tcg1.appendChild(st1);
+
+      document.body.appendChild(rmp);
     </script>
   </body>
 </html>
