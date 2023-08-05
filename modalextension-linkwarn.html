@@ -33,5 +33,20 @@
         </div>
       </div>
     </div>
+    <script>
+      const SearchParam = (ID) => {
+        return new URLSearchParams(location.search).get(ID.toString()) || ""
+      };
+
+      const packaged = SearchParam(package);
+      const site_url = SearchParam(url);
+
+      if (packaged === 0) {
+        const text_url = getElementsByClassName(Url);
+        text_url.textContent = `"${site_url}"`;
+      } else if (packaged === 1) {
+        openWindow(site_url);
+      };
+    </script>
   </body>
 </html>
