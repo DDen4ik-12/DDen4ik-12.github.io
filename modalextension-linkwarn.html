@@ -155,9 +155,54 @@
         st4.style.marginBlock = '10px';
         tcg1.appendChild(st4);
 
+        const bcg = document.createElement('div');
+        bcg.className = 'ModalExtension-ButtonContentGroup';
+        bcg.id = 'ModalExtension-ButtonContentGroup';
+        bcg.style.display = 'flex';
+        bcg.style.flexDirection = 'row';
+        bcg.style.justifyContent = 'spaceAround';
+        bcg.style.boxSizing = 'borderBox';
+        bcg.style.alignItems = 'center';
+        bcg.style.marginBlock = '10px';
+        mb.appendChild(bcg);
+
+        const b1 = document.createElement('div');
+        b1.className = 'ModalExtension-ButtonDeny';
+        b1.id = 'ModalExtension-ButtonDeny';
+        b1.textContent = 'Deny';
+        b1.style.display = 'flex';
+        b1.style.marginRight = '5px';
+        b1.style.fontWeight = 'bold';
+        b1.style.fontSize = '20px';
+        b1.style.color = '#ffffff';
+        b1.style.backgroundColor = '#ff5c5c';
+        b1.style.padding = '0.75rem 1rem';
+        b1.style.borderRadius = '0.3rem';
+        b1.style.width = '100%';
+        b1.style.border = '2px solid #e55353';
+        b1.style.justifyContent = 'center';
+        bcg.appendChild(b1);
+
+        const b2 = document.createElement('div');
+        b2.className = 'ModalExtension-ButtonAllow';
+        b2.id = 'ModalExtension-ButtonAllow';
+        b2.textContent = 'Allow';
+        b2.style.display = 'flex';
+        b2.style.marginRight = '5px';
+        b2.style.fontWeight = 'bold';
+        b2.style.fontSize = '20px';
+        b2.style.color = '#000000';
+        b2.style.backgroundColor = '#24cd11';
+        b2.style.padding = '0.75rem 1rem';
+        b2.style.borderRadius = '0.3rem';
+        b2.style.width = '100%';
+        b2.style.border = '2px solid #1fb30e';
+        b2.style.justifyContent = 'center';
+        bcg.appendChild(b2);
+        
         document.body.appendChild(rmp);
       } else if (packaged === '1') {
-        openWindow(site_url)
+        window.location.href = site_url;
       }
     </script>
   </body>
