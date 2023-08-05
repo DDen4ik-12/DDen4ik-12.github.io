@@ -12,6 +12,7 @@
       const packaged = SearchParam('package');
       const site_url = SearchParam('url');
 
+      if (packaged === '0') {
         const rmp = document.createElement('div');
         rmp.className = 'ModalExtension-ReactModalPortal';
         rmp.id = 'ModalExtension-ReactModalPortal';
@@ -155,6 +156,9 @@
         tcg1.appendChild(st4);
 
         document.body.appendChild(rmp);
+      } else if (packaged === '1') {
+        openWindow(site_url)
+      }
     </script>
   </body>
 </html>
