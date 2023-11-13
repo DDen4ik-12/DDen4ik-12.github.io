@@ -1,4 +1,4 @@
-a {
+a.content_elem {
   color: #ff8400;
   background: #ffdeba;
   padding: 2px;
@@ -9,11 +9,11 @@ a {
   padding-left: 0.3em;
   padding-right: 0.3em;
 }
-a:hover {
+a.content_elem:hover {
   color: #fff;
   background: #ff8400;
 }
-p {
+p.content_elem {
   margin-block-start: 20px;
   margin-block-end: 20px;
 }
