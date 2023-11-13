@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Сайт Денчика-12",
+    "short_name": "Сайт Денчика-12",
+    "description": "Сайт Скретчера под никнеймом Денчик-12",
     "icons": [
        {
           "src": "https://dden4ik-12.github.io/website assets/favicons/android-chrome-192x192.png",
