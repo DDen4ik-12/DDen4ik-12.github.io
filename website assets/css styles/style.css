@@ -1,4 +1,4 @@
-a.content_elem {
+a.link {
   color: #ff8400;
   background: #ffdeba;
   padding: 2px;
@@ -9,7 +9,7 @@ a.content_elem {
   padding-left: 0.3em;
   padding-right: 0.3em;
 }
-a.content_elem:hover {
+a.link:hover {
   color: #fff;
   background: #ff8400;
 }
@@ -17,84 +17,13 @@ p.content_elem {
   margin-block-start: 20px;
   margin-block-end: 20px;
 }
-p.text_quote {
-  margin-block-start: 10px;
-  margin-inline-start: 10px;
-  margin-block-end: 2px;
-  font-style: italic;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-p.author_text_quote {
-  margin-block-start: unset;
-  margin-block-end: 10px;
-  margin-inline-start: 10px;
-  font-size: 12px;
-}
-div.text_bubble {
-  margin-inline-end: 10px;
-  margin-block-end: 10px;
-}
-p.text_bubble {
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-}
-p.title_text_bubble {
-  font-weight: bold;
-  margin-block-start: 10px;
-  margin-block-end: 5px;
-  margin-inline-end: 10px;
-}
-div.bubble_custom {
-  border-radius: 15px;
-  border-width: 4px;
-  border-style: solid;
-  margin: 20px;
-  padding: 0.1px;
-  display: flex;
-  align-items: center;
-}
-div.bubble_warn {
-  background: #ff9900;
-  border-radius: 15px;
-  border: 4px solid #a16b00;
-  margin: 20px;
-  padding: 0.1px;
-  display: flex;
-  align-items: center;
-}
-div.bubble_info {
-  background: #adffff;
-  border-radius: 15px;
-  border: 4px solid #6e9f9b;
-  margin: 20px;
-  padding: 0.1px;
-  display: flex;
-  align-items: center;
-}
-div.bubble_tip {
-  background: #d9ff7f;
-  border-radius: 15px;
-  border: 4px solid #99b359;
-  margin: 20px;
-  padding: 0.1px;
-  display: flex;
-  align-items: center;
-}
-div.bubble_quote {
-  background: #d7d7d7;
-  border-radius: 15px;
-  margin: 20px;
-  padding: 0.1px;
-}
-img.bubble_left {
-  height: 40px;
-  width: 40px;
-  padding: 10px;
-}
-img.quote_img {
-  margin-right: 10px;
+a.navigation_logo {
+    display: flex;
+    align-items: center;
+    color: black;
+    background: unset;
+    font-weight: unset;
+    margin-left: 0.7em;
 }
 a.navigation_button {
     display: flex;
