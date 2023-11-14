@@ -57,6 +57,3 @@ a.navigation_button:hover {
   background: var(--hover-bg-color);
   border-bottom: 2px solid var(--hover-border-color);
 }
-a.navigation_button:hover {
-  background: #00000021;
-}
