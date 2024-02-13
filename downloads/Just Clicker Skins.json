@@ -7,10 +7,7 @@ Collect types: Start, Other, Shop, Heart, Code
 Buy types: Money, Diamond
 
 If collect type Start, Other, Heart or Code, use nothing
-If collect type Shop, use "Buy": {
-  "Price": 0,
-  "Type": "Money"
-}
+If collect type Shop, use "Buy Type": "Money"
 ---
 [
   {
@@ -35,6 +32,42 @@ If collect type Shop, use "Buy": {
     },
     "Collect": {
       "Type": "Start",
+      "Pretty": {
+        "Draw": false,
+        "New Form": false,
+        "Animations": {
+          "Main": false,
+          "Not Click": false,
+          "Particles": false
+        },
+        "Hard Draw": false,
+        "Scratcher Elem": false
+      }
+    }
+  },
+  {
+    "Name": "Green Button",
+    "Author": 0,
+    "Look": {
+      "Main": {
+        "Skin": 1,
+        "Color": 30,
+        "Animate": 0
+      },
+      "Not Click": {
+        "Skin": 1,
+        "Color": 0,
+        "Animate": 0
+      },
+      "Particles": {
+        "Skin": 1,
+        "Color": 30,
+        "Animate": 0
+      }
+    },
+    "Collect": {
+      "Type": "Shop",
+      "Buy Type": "Money",
       "Pretty": {
         "Draw": false,
         "New Form": false,
