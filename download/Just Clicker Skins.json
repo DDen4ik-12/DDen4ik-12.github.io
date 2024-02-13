@@ -1,0 +1,51 @@
+If author game creator, use "Author": 0
+
+If animate nothing, use "Animate": 0
+If animate exist, use "Animate": [1, 1]
+
+Collect types: Start, Other, Shop, Heart, Code
+Buy types: Money, Diamond
+
+If collect type Start, Other, Heart or Code, use nothing
+If collect type Shop, use "Buy": {
+  "Price": 0,
+  "Type": "Money"
+}
+---
+[
+  {
+    "Name": "Red Button",
+    "Author": 0,
+    "Look": {
+      "Main": {
+        "Skin": 1,
+        "Color": 0,
+        "Animate": 0
+      },
+      "Not Click": {
+        "Skin": 1,
+        "Color": 0,
+        "Animate": 0
+      },
+      "Particles": {
+        "Skin": 1,
+        "Color": 0,
+        "Animate": 0
+      },
+    },
+    "Collect": {
+      "Type": "Start",
+      "Pretty": {
+        "Draw": false,
+        "New Form": false,
+        "Animations": {
+          "Main": false,
+          "Not Click": false,
+          "Particles": false,
+        },
+        "Hard Draw": false,
+        "Scratcher Elem": false
+      }
+    }
+  },
+]
