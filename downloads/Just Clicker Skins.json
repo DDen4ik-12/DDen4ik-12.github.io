@@ -41,7 +41,7 @@ If collect type Shop, use "Buy": {
         "Animations": {
           "Main": false,
           "Not Click": false,
-          "Particles": false,
+          "Particles": false
         },
         "Hard Draw": false,
         "Scratcher Elem": false
