@@ -31,7 +31,7 @@ If collect type Shop, use "Buy": {
         "Skin": 1,
         "Color": 0,
         "Animate": 0
-      },
+      }
     },
     "Collect": {
       "Type": "Start",
