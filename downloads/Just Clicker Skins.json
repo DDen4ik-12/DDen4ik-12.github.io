@@ -1,4 +1,4 @@
-If author game creator, use "Author": 0
+If author - game creator, use "Author": 0
 
 If animate nothing, use "Animate": 0
 If animate exist, use "Animate": [1, 1]
@@ -35,6 +35,7 @@ If collect type Shop, use "Buy Type": "Money"
       "Pretty": {
         "Draw": false,
         "New Form": false,
+        "New Sound": false,
         "Animations": {
           "Main": false,
           "Not Click": false,
@@ -71,6 +72,7 @@ If collect type Shop, use "Buy Type": "Money"
       "Pretty": {
         "Draw": false,
         "New Form": false,
+        "New Sound": false,
         "Animations": {
           "Main": false,
           "Not Click": false,
@@ -107,6 +109,7 @@ If collect type Shop, use "Buy Type": "Money"
       "Pretty": {
         "Draw": false,
         "New Form": false,
+        "New Sound": false,
         "Animations": {
           "Main": false,
           "Not Click": false,
@@ -143,6 +146,7 @@ If collect type Shop, use "Buy Type": "Money"
       "Pretty": {
         "Draw": true,
         "New Form": true,
+        "New Sound": false,
         "Animations": {
           "Main": false,
           "Not Click": false,
