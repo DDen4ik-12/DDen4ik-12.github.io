@@ -14,6 +14,7 @@ If collect type Shop, use "Buy Type": "Money"
     "Name": "Red Button",
     "Author": 0,
     "Look": {
+      "Sound": 1,
       "Main": {
         "Skin": 1,
         "Color": 0,
@@ -50,6 +51,7 @@ If collect type Shop, use "Buy Type": "Money"
     "Name": "Green Button",
     "Author": 0,
     "Look": {
+      "Sound": 1,
       "Main": {
         "Skin": 1,
         "Color": 30,
@@ -87,6 +89,7 @@ If collect type Shop, use "Buy Type": "Money"
     "Name": "Blue Button",
     "Author": 0,
     "Look": {
+      "Sound": 1,
       "Main": {
         "Skin": 1,
         "Color": 60,
@@ -124,6 +127,7 @@ If collect type Shop, use "Buy Type": "Money"
     "Name": "Portal",
     "Author": 0,
     "Look": {
+      "Sound": 1,
       "Main": {
         "Skin": 2,
         "Color": 0,
