@@ -37,6 +37,7 @@ If collect type Shop, use "Buy Type": "Money"
         "Draw": false,
         "New Form": false,
         "New Sound": false,
+        "New Particles": false,
         "Animations": {
           "Main": false,
           "Not Click": false,
@@ -75,6 +76,7 @@ If collect type Shop, use "Buy Type": "Money"
         "Draw": false,
         "New Form": false,
         "New Sound": false,
+        "New Particles": false,
         "Animations": {
           "Main": false,
           "Not Click": false,
@@ -113,6 +115,7 @@ If collect type Shop, use "Buy Type": "Money"
         "Draw": false,
         "New Form": false,
         "New Sound": false,
+        "New Particles": false,
         "Animations": {
           "Main": false,
           "Not Click": false,
@@ -151,6 +154,84 @@ If collect type Shop, use "Buy Type": "Money"
         "Draw": true,
         "New Form": true,
         "New Sound": false,
+        "New Particles": false,
+        "Animations": {
+          "Main": false,
+          "Not Click": false,
+          "Particles": false
+        },
+        "Hard Draw": false,
+        "Scratcher Elem": false
+      }
+    }
+  },
+  {
+    "Name": "Floppa Cube",
+    "Author": 0,
+    "Look": {
+      "Sound": 1,
+      "Main": {
+        "Skin": 3,
+        "Color": 0,
+        "Animate": 0
+      },
+      "Not Click": {
+        "Skin": 1,
+        "Color": 0,
+        "Animate": 0
+      },
+      "Particles": {
+        "Skin": 2,
+        "Color": 0,
+        "Animate": 0
+      }
+    },
+    "Collect": {
+      "Type": "Shop",
+      "Buy Type": "Diamond",
+      "Pretty": {
+        "Draw": true,
+        "New Form": true,
+        "New Sound": false,
+        "New Particles": true,
+        "Animations": {
+          "Main": false,
+          "Not Click": false,
+          "Particles": false
+        },
+        "Hard Draw": true,
+        "Scratcher Elem": false
+      }
+    }
+  },
+  {
+    "Name": "Maxwell",
+    "Author": 0,
+    "Look": {
+      "Sound": 1,
+      "Main": {
+        "Skin": 4,
+        "Color": 0,
+        "Animate": 0
+      },
+      "Not Click": {
+        "Skin": 1,
+        "Color": 0,
+        "Animate": 0
+      },
+      "Particles": {
+        "Skin": 1,
+        "Color": 16,
+        "Animate": 0
+      }
+    },
+    "Collect": {
+      "Type": "Code",
+      "Pretty": {
+        "Draw": true,
+        "New Form": true,
+        "New Sound": false,
+        "New Particles": false,
         "Animations": {
           "Main": false,
           "Not Click": false,
