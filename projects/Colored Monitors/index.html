@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Сайт Денчика-12 | Colored Monitors</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dden4ik-12.github.io/website assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dden4ik-12.github.io/website%20assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dden4ik-12.github.io/website%20assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="https://dden4ik-12.github.io/website assets/manifest.webmanifest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,800;1,400;1,800&display=swap">
+    <link rel="stylesheet" href="https://dden4ik-12.github.io/website assets/css styles/style.css">
+    <style>
+      div.content_categories_grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: -20px;
+        display: grid;
+      }
+      @media (max-width: 944px) {
+        div.content_categories_grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 650px) {
+        div.content_categories_grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      a.content_categories_grid_button {
+        color: black;
+        font-weight: unset;
+        background: #eeeeee;
+        border-bottom: 2px solid #aaaaaa;
+        border-radius: 25px;
+        margin: 20px;
+        text-decoration: unset;
+        padding: 5px 15px;
+        transition: 0.3s linear;
+      }
+      a.content_categories_grid_button:hover {
+        color: var(--hover-text-color);
+        background: var(--hover-bg-color);
+        border-bottom: 2px solid var(--hover-border-color);
+      }
+      .content_categories_grid_button_content {
+        margin: 10px;
+        width: 92%;
+      }
+    </style>
+  </head>
+  <body style="font-family: Noto Sans; margin: 0;">
+    <div class="navigation">
+      <nav class="navigation_panel">
+        <a href="https://dden4ik-12.github.io" title="Сайт Денчика-12" class="navigation_logo">
+          <img src="https://dden4ik-12.github.io/website assets/site-logo.svg" style="height: 70px;">
+        </a>
+        <a href="https://dden4ik-12.github.io/projects" title="Проекты" class="navigation_button" style="--hover-text-color: black;--hover-bg-color: #66ff6a;--hover-border-color: #46af49;">
+          Проекты
+        </a>
+      </nav>
+      <nav class="navigation_hide_content" style="width: auto;height: 77px;background: white;position: fixed;top: 0;left: 0;z-index: 99999;right: 0;"></nav>
+      <div class="navigation_size" style="width: auto;height: 70px;"></div>
+    </div>
+    <div class="content" style="margin-inline-start: 20px; margin-inline-end: 20px;">
+      <p></p>
+      <center>
+        <img class="content_elem" src="https://dden4ik-12.github.io/website assets/projects.svg">
+        <p class="content_elem" style="font-size: 50px;">Colored Monitors</p>
+        <p class="content_elem">Chrome-расширение, окрашивающее фон блоков-репортеров пользовательских расширений в <a href="https://turbowarp.org/">TurboWarp</a></p>
+      </center>
+    </div>
+  </body>
+</html>
