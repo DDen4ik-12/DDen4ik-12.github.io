@@ -56,7 +56,7 @@ div.navigation_picture {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 400px;
+  height: 300px;
 }
 div.navigation_picture > svg {
   display: block;
