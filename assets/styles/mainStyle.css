@@ -68,7 +68,8 @@ div.navigation_picture > svg {
 }
 div.navigation_picture > span {
   position: absolute;
-  font-size: 60px;
+  font-size: 70px;
+  font-weight: bold;
 }
 a.navigation_logo {
   display: flex;
