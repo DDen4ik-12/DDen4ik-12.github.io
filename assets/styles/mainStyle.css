@@ -70,6 +70,7 @@ div.navigation_picture > span {
   position: absolute;
   font-size: 70px;
   font-weight: bold;
+  text-align: center;
 }
 a.navigation_logo {
   display: flex;
