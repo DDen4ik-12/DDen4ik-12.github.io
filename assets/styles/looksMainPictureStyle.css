@@ -1,0 +1,55 @@
+@keyframes nav-pic_circle_animation-1 {
+  0%,
+  100% {
+    r: 60px;
+  }
+  25% {
+    r: 80px;
+  }
+  75% {
+    r: 30px;
+  }
+}
+
+div.navigation_picture > svg {
+  background: repeating-linear-gradient(45deg, gold, #ffe976 150px);
+  border-bottom-color: #efc900;
+}
+div.navigation_picture > svg > circle {
+  fill: none;
+  stroke: var(--looks-main-30);
+  stroke-width: 20px;
+  r: 60px;
+  animation: 2.4s infinite nav-pic_circle_animation-1 linear;
+}
+
+div.navigation_picture > svg > circle:nth-child(1) {
+  cx: 20%;
+  cy: 20%;
+  animation-delay: 0s;
+}
+div.navigation_picture > svg > circle:nth-child(2) {
+  cx: 35%;
+  cy: 90%;
+  animation-delay: 0.4s;
+}
+div.navigation_picture > svg > circle:nth-child(3) {
+  cx: 55%;
+  cy: 0%;
+  animation-delay: 0.8s;
+}
+div.navigation_picture > svg > circle:nth-child(4) {
+  cx: 80%;
+  cy: 80%;
+  animation-delay: 1.2s;
+}
+div.navigation_picture > svg > circle:nth-child(5) {
+  cx: 65%;
+  cy: 10%;
+  animation-delay: 1.6s;
+}
+div.navigation_picture > svg > circle:nth-child(6) {
+  cx: 45%;
+  cy: 100%;
+  animation-delay: 2s;
+}
