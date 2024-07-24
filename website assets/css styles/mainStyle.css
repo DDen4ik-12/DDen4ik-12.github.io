@@ -44,15 +44,26 @@ div.navigation_picture {
   width: 100%;
   height: 400px;
 }
-div.navigation_picture_svg {
+div.navigation_picture > svg {
   display: block;
   width: 100%;
   height: 100%;
+}
+div.navigation_picture > span {
+  position: absolute;
+  font-size: 60px;
 }
 a.navigation_logo {
   display: flex;
   align-items: center;
   color: black;
+}
+
+div.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 a.link {
