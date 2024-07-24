@@ -12,7 +12,7 @@ html {
   --text: hsl(225deg 15% 40%);
 }
 body {
-  font-family: Noto Sans;
+  font-family: "Noto Sans", sans-serif;
   margin: 0;
   color: var(--text);
 }
