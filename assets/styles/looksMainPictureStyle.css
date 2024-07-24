@@ -24,13 +24,13 @@ div.navigation_picture > svg > circle {
 }
 
 div.navigation_picture > svg > circle:nth-child(1) {
-  cx: 20%;
+  cx: 5%;
   cy: 20%;
   animation-delay: 0s;
 }
 div.navigation_picture > svg > circle:nth-child(2) {
-  cx: 35%;
-  cy: 90%;
+  cx: 25%;
+  cy: 80%;
   animation-delay: 0.5s;
 }
 div.navigation_picture > svg > circle:nth-child(3) {
@@ -39,13 +39,13 @@ div.navigation_picture > svg > circle:nth-child(3) {
   animation-delay: 1s;
 }
 div.navigation_picture > svg > circle:nth-child(4) {
-  cx: 80%;
+  cx: 95%;
   cy: 80%;
   animation-delay: 1.5s;
 }
 div.navigation_picture > svg > circle:nth-child(5) {
-  cx: 65%;
-  cy: 10%;
+  cx: 75%;
+  cy: 20%;
   animation-delay: 2s;
 }
 div.navigation_picture > svg > circle:nth-child(6) {
