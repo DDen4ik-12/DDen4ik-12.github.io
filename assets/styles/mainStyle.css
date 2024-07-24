@@ -1,3 +1,13 @@
+html {
+  --main-20: hsl(51deg 100% 20%);
+  --main-30: hsl(51deg 100% 30%);
+  --main-40: hsl(51deg 100% 40%);
+  --main-50: hsl(51deg 100% 50%);
+  --main-60: hsl(51deg 100% 60%);
+  --main-70: hsl(51deg 100% 70%);
+  --main-80: hsl(51deg 100% 80%);
+  --main-90: hsl(51deg 100% 90%);
+}
 body {
   font-family: Noto Sans;
   margin: 0;
