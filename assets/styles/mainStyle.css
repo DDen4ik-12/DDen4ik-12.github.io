@@ -7,6 +7,8 @@ html {
   --looks-main-70: hsl(51deg 100% 70%);
   --looks-main-80: hsl(51deg 100% 80%);
   --looks-main-90: hsl(51deg 100% 90%);
+  --link-50: hsl(30deg 100% 50%);
+  --link-90: hsl(30deg 100% 90%);
 }
 body {
   font-family: Noto Sans;
@@ -20,8 +22,8 @@ nav.navigation_panel {
   left: 5px;
   right: 5px;
   height: 70px;
-  background: gold;
-  border-bottom: 2px solid #efc900;
+  background: var(--looks-main-50);
+  border-bottom: 2px solid var(--looks-main-40);
   border-radius: 25px;
   z-index: 100000;
   transition: 0.3s linear;
@@ -82,13 +84,13 @@ div.content {
 a.link {
   border-radius: 10px;
   padding: 2px 5px;
-  background: #ffe3c6;
-  color: #ff8400;
+  background: var(--link-90);
+  color: var(--link-50);
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s linear;
 }
 a.link:hover {
-  background: #ff8400;
+  background: var(--link-50);
   color: #ffffff;
 }
