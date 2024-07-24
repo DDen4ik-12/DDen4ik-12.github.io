@@ -12,7 +12,7 @@
 }
 
 div.navigation_picture > svg {
-  background: repeating-linear-gradient(45deg, var(--looks-main-50), var(--looks-main-80) 150px);
+  background: repeating-linear-gradient(45deg, var(--looks-main-50), var(--looks-main-70) 150px);
   border-bottom-color: #efc900;
 }
 div.navigation_picture > svg > circle {
