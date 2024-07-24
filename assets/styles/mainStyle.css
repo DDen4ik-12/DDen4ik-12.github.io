@@ -72,11 +72,13 @@ div.content {
 a.link {
   border-radius: 10px;
   padding: 2px 5px;
+  background: #ffe3c6;
+  color: #ff8400;
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s linear;
 }
 a.link:hover {
   background: #ff8400;
-  color: #fff;
+  color: #ffffff;
 }
