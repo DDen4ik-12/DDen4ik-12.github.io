@@ -20,7 +20,7 @@ div.navigation_picture > svg > circle {
   stroke: var(--looks-main-30);
   stroke-width: 20px;
   r: 60px;
-  animation: 2.4s infinite nav-pic_circle_animation-1 linear;
+  animation: 4s infinite nav-pic_circle_animation-1 linear;
 }
 
 div.navigation_picture > svg > circle:nth-child(1) {
@@ -31,25 +31,25 @@ div.navigation_picture > svg > circle:nth-child(1) {
 div.navigation_picture > svg > circle:nth-child(2) {
   cx: 35%;
   cy: 90%;
-  animation-delay: 0.4s;
+  animation-delay: 0.5s;
 }
 div.navigation_picture > svg > circle:nth-child(3) {
   cx: 55%;
   cy: 0%;
-  animation-delay: 0.8s;
+  animation-delay: 1s;
 }
 div.navigation_picture > svg > circle:nth-child(4) {
   cx: 80%;
   cy: 80%;
-  animation-delay: 1.2s;
+  animation-delay: 1.5s;
 }
 div.navigation_picture > svg > circle:nth-child(5) {
   cx: 65%;
   cy: 10%;
-  animation-delay: 1.6s;
+  animation-delay: 2s;
 }
 div.navigation_picture > svg > circle:nth-child(6) {
   cx: 45%;
   cy: 100%;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
