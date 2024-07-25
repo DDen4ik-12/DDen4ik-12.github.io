@@ -5,27 +5,27 @@
   "start_url": "https://dden4ik-12.github.io",
   "icons": [
     {
-      "src": "https://dden4ik-12.github.io/assets/favicons/favicon16x16.png",
+      "src": "/assets/favicons/favicon16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "https://dden4ik-12.github.io/assets/favicons/favicon32x32.png",
+      "src": "/assets/favicons/favicon32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "https://dden4ik-12.github.io/assets/favicons/appleTouchIcon.png",
+      "src": "/assets/favicons/appleTouchIcon.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "https://dden4ik-12.github.io/assets/favicons/androidChrome192x192.png",
+      "src": "/assets/favicons/androidChrome192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://dden4ik-12.github.io/assets/favicons/androidChrome512x512.png",
+      "src": "/assets/favicons/androidChrome512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
