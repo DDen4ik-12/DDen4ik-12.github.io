@@ -75,7 +75,7 @@ div.navigation_picture > span {
 a.navigation_logo {
   display: flex;
   align-items: center;
-  margin: 8px;
+  margin: 10px;
 }
 a.navigation_logo > img {
   width: 100%;
