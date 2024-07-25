@@ -76,10 +76,6 @@ a.navigation_logo {
   display: flex;
   align-items: center;
   margin: 10px;
-  transform: translateX(var(--x)) translateY(var(--y)) rotate(var(--rotate));
-  --x: 0;
-  --y: 10;
-  --rotate: 0;
 }
 a.navigation_logo > img {
   width: 100%;
