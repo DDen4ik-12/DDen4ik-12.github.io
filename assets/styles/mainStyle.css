@@ -31,13 +31,8 @@ nav.navigation_panel {
   transition: 0.3s linear;
 }
 div.navigation.start > nav.navigation_panel {
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 75px;
   background: none;
   border: none;
-  border-radius: 0;
 }
 nav.navigation_hide-content {
   position: fixed;
