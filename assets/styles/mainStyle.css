@@ -42,6 +42,7 @@ nav.navigation_hide-content {
   height: 77px;
   background: white;
   z-index: 99999;
+  transition: 0.3s linear;
 }
 div.navigation.start > nav.navigation_hide-content {
   background: none;
