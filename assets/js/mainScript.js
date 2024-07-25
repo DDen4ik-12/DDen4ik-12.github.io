@@ -30,7 +30,6 @@ const trueCos = (deg) => {
 };
 const navigation = document.querySelector("div.navigation");
 const navigationLogo = document.querySelector("a.navigation_logo");
-let i = 0
 
 setInterval(() => {
   if (window.pageYOffset < 225) {
@@ -41,13 +40,5 @@ setInterval(() => {
     if (navigation.classList.contains("start")) {
       navigation.classList.remove("start");
     }
-  }
-  navigationLogo.style.setProperty("--x", trueSin(i * 1.2) * 10);
-  navigationLogo.style.setProperty("--y", trueCos(i) * 10);
-  navigationLogo.style.setProperty("--rotate", trueSin(i * 0.8) * 10);
-  if (i + 1 == 1800) {
-    i = 0;
-  } else {
-    i++;
   }
 }, 10);
