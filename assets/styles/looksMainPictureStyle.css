@@ -28,25 +28,25 @@ div.navigation_picture > svg > circle:nth-child(1) {
 div.navigation_picture > svg > circle:nth-child(2) {
   cx: 25%;
   cy: 80%;
-  animation-delay: 0.7s;
+  animation-delay: 0.8s;
 }
 div.navigation_picture > svg > circle:nth-child(3) {
   cx: 35%;
   cy: 0%;
-  animation-delay: 1.4s;
+  animation-delay: 1.6s;
 }
 div.navigation_picture > svg > circle:nth-child(4) {
   cx: 95%;
   cy: 80%;
-  animation-delay: 2.1s;
+  animation-delay: 2.4s;
 }
 div.navigation_picture > svg > circle:nth-child(5) {
   cx: 75%;
   cy: 20%;
-  animation-delay: 2.8s;
+  animation-delay: 3.2s;
 }
 div.navigation_picture > svg > circle:nth-child(6) {
   cx: 65%;
   cy: 100%;
-  animation-delay: 3.5s;
+  animation-delay: 4s;
 }
