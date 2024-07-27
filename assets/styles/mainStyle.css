@@ -89,6 +89,7 @@ footer {
   padding: 20px;
   gap: 20px;
   background: var(--looks-main-20);
+  color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -102,7 +103,6 @@ div.footer_logo > img {
   height: 30px;
 }
 div.footer_logo > div {
-  color: white;
   font-weight: bold;
 }
 
