@@ -92,6 +92,19 @@ footer {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+footer > * {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+div.footer_logo > img {
+  height: 30px;
+}
+div.footer_logo > div {
+  color: white;
+  font-weight: bold;
+}
 
 div.content {
   display: flex;
