@@ -1,10 +1,10 @@
 @keyframes nav-pic_circle_animation-1 {
   0%,
   100% {
-    r: 40px;
+    transform: translateY(40px);
   }
   50% {
-    r: 80px;
+    transform: translateY(-40px);
   }
 }
 
@@ -28,6 +28,7 @@ div.navigation_picture > svg > circle {
   stroke: var(--looks-main-40);
   stroke-width: 20px;
   r: 40px;
+  transform: translateY(40px);
   animation: 8s infinite nav-pic_circle_animation-1 ease-in-out;
 }
 
