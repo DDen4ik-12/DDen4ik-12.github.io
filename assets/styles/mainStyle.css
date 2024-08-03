@@ -116,8 +116,12 @@ div.footer_logo > div {
 div.footer_social > .button {
   background: var(--looks-main-40);
   border-bottom: 2px solid var(--looks-main-30);
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+}
+div.footer_social > .button > img {
+  width: 100%;
+  height: 100%;
 }
 
 div.content {
