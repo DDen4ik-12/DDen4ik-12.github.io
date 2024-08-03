@@ -7,6 +7,14 @@ html {
   --looks-main-70: hsl(51deg 100% 70%);
   --looks-main-80: hsl(51deg 100% 80%);
   --looks-main-90: hsl(51deg 100% 90%);
+  --ui-main-20: hsl(0deg 0% 20%);
+  --ui-main-30: hsl(0deg 0% 30%);
+  --ui-main-40: hsl(0deg 0% 40%);
+  --ui-main-50: hsl(0deg 0% 50%);
+  --ui-main-60: hsl(0deg 0% 60%);
+  --ui-main-70: hsl(0deg 0% 70%);
+  --ui-main-80: hsl(0deg 0% 80%);
+  --ui-main-90: hsl(0deg 0% 90%);
   --link-50: hsl(30deg 100% 50%);
   --link-90: hsl(30deg 100% 90%);
   --text: hsl(225deg 15% 40%);
@@ -105,6 +113,10 @@ div.footer_logo > img {
 div.footer_logo > div {
   font-weight: bold;
 }
+div.footer_social > .button {
+  background: var(--looks-main-40);
+  border-bottom: 2px solid var(--looks-main-30);
+}
 
 div.content {
   display: flex;
@@ -149,4 +161,15 @@ a.link {
 a.link:hover {
   background: var(--link-50);
   color: #ffffff;
+}
+
+.button {
+  color: var(--text);
+  background: var(--ui-main-90);
+  border-bottom: 2px solid var(--ui-main-70);
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-weight: normal;
+  text-decoration: none;
+  transition: 0.3s linear;
 }
