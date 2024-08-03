@@ -116,6 +116,8 @@ div.footer_logo > div {
 div.footer_social > .button {
   background: var(--looks-main-40);
   border-bottom: 2px solid var(--looks-main-30);
+  width: 50px;
+  height: 50px;
 }
 
 div.content {
