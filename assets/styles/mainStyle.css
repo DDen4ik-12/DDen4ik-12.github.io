@@ -170,17 +170,31 @@ a.link:hover {
 }
 
 .button {
-  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   background: var(--ui-main-90);
+  color: var(--text);
+  font-size: 25px;
   border-bottom: 2px solid var(--ui-main-70);
   border-radius: 10px;
-  padding: 5px 15px;
+  padding: 20px;
   font-weight: normal;
   text-decoration: none;
   transition: 0.3s linear;
 }
 .button:hover {
-  color: var(--button-hov-text)!important;
   background: var(--button-hov-bg)!important;
+  color: var(--button-hov-text)!important;
   border-bottom-color: var(--button-hov-border)!important;
+}
+.button.content_big-button {
+  width: 300px;
+  height: 300px;
+}
+.button.content_big-button > img {
+  width: 100%;
+  height: calc(100% - 54px);
 }
