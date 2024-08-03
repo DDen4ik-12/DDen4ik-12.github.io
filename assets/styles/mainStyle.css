@@ -180,7 +180,7 @@ a.link:hover {
   transition: 0.3s linear;
 }
 .button:hover {
-  color: var(--button-hov-text);
-  background: var(--button-hov-bg);
-  border-bottom-color: var(--button-hov-border);
+  color: var(--button-hov-text)!important;
+  background: var(--button-hov-bg)!important;
+  border-bottom-color: var(--button-hov-border)!important;
 }
