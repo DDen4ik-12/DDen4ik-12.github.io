@@ -179,3 +179,8 @@ a.link:hover {
   text-decoration: none;
   transition: 0.3s linear;
 }
+.button:hover {
+  color: var(--button-hov-text);
+  background: var(--button-hov-bg);
+  border-bottom-color: var(--button-hov-color);
+}
