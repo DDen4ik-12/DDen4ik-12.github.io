@@ -142,7 +142,7 @@ div.content_group.image-and-text.left {
   flex-direction: row;
 }
 div.content_group.image-and-text.right {
-  flex-direction: reverse-row;
+  flex-direction: row-reverse;
 }
 div.content_group.image-and-text > div {
   display: flex;
