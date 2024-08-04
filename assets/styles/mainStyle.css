@@ -154,6 +154,17 @@ div.content_group.image-and-text > img {
   max-width: 700px;
   width: 50%;
 }
+div.content_group.list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--ui-main-60);
+  border: 2px dashed var(--ui-main-40);
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(100% - 40px);
+  overflow-x: auto;
+}
 
 a.link {
   border-radius: 10px;
