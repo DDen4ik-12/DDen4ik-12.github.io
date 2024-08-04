@@ -1,0 +1,64 @@
+@keyframes nav-pic_circle_animation-1 {
+  0%,
+  100% {
+    transform: translateY(40px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+html {
+  --looks-main-20: hsl(122deg 100% 20%);
+  --looks-main-30: hsl(122deg 100% 30%);
+  --looks-main-40: hsl(122deg 100% 40%);
+  --looks-main-50: hsl(122deg 100% 50%);
+  --looks-main-60: hsl(122deg 100% 60%);
+  --looks-main-70: hsl(122deg 100% 70%);
+  --looks-main-80: hsl(122deg 100% 80%);
+  --looks-main-90: hsl(122deg 100% 90%);
+}
+
+div.navigation_picture > svg {
+  background: radial-gradient(var(--looks-main-70), var(--looks-main-50));
+  border-bottom-color: var(--looks-main-40);
+}
+div.navigation_picture > svg > circle {
+  fill: none;
+  stroke: var(--looks-main-40);
+  stroke-width: 20px;
+  r: 40px;
+  transform: translateY(40px);
+  animation: 8s infinite nav-pic_circle_animation-1 ease-in-out;
+}
+
+div.navigation_picture > svg > circle:nth-child(1) {
+  cx: 5%;
+  cy: 20%;
+  animation-delay: 0s;
+}
+div.navigation_picture > svg > circle:nth-child(2) {
+  cx: 25%;
+  cy: 80%;
+  animation-delay: 0.8s;
+}
+div.navigation_picture > svg > circle:nth-child(3) {
+  cx: 35%;
+  cy: 0%;
+  animation-delay: 1.6s;
+}
+div.navigation_picture > svg > circle:nth-child(4) {
+  cx: 95%;
+  cy: 80%;
+  animation-delay: 2.4s;
+}
+div.navigation_picture > svg > circle:nth-child(5) {
+  cx: 75%;
+  cy: 20%;
+  animation-delay: 3.2s;
+}
+div.navigation_picture > svg > circle:nth-child(6) {
+  cx: 65%;
+  cy: 100%;
+  animation-delay: 4s;
+}
