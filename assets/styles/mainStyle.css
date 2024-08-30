@@ -209,5 +209,5 @@ a.link:hover {
 }
 .button.content_big-button > img {
   width: 100%;
-  height: calc(100% - 54px);
+  height: 250px;
 }
