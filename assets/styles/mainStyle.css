@@ -136,6 +136,7 @@ div.content {
 div.content_group.image-and-text {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 50px;
 }
 div.content_group.image-and-text.left {
