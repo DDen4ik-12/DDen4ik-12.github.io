@@ -1,7 +1,7 @@
 const navigation = document.querySelector("div.navigation");
 const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
-if (typeof (new URL(location.href)).searchParams.get("randCol") != "undefined") {
+if (typeof ((new URL(location.href)).searchParams.get("randCol") ?? undefined) != "undefined") {
   const randomColorMode = new Object();
   randomColorMode.looksMain = {
     hue: Math.floor(Math.random() * 360),
