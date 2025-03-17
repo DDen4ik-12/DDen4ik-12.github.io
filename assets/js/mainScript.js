@@ -24,6 +24,14 @@ if (typeof ((new URL(location.href)).searchParams.get("randCol") ?? undefined) !
     }`;
   metaThemeColor.content = `hsl(${randomColorMode.looksMain.hue}deg ${randomColorMode.looksMain.saturation}% 50%)`;
   document.head.appendChild(randomColorMode.style);
+
+  document.querySelectorAll("a").forEach((x) => {
+    const href = new URL(x.href);
+    if (href.host == "dden4ik-12.github.io") {
+      href.searchParams.append("randCol", "");
+      x.href = href;
+    }
+  });
 }
 
 setInterval(() => {
