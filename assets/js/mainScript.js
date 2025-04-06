@@ -1,5 +1,5 @@
 const navigation = document.querySelector("div.navigation");
-const navigationPictureBackground = document.querySelector("div.navigation > div > div");
+const navigationPictureBackground = document.querySelector("div.navigation_picture > div > div");
 const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
 const hsl2Rgb = (h, s, l) => {
