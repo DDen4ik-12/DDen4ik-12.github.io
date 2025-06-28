@@ -47,7 +47,10 @@ if (typeof ((new URL(location.href)).searchParams.get("randCol") ?? undefined) !
     }`;
   metaThemeColor.content = `hsl(${randomColorMode.looksMain.hue}deg ${randomColorMode.looksMain.saturation}% 50%)`;
   document.head.appendChild(randomColorMode.style);
-  if (location.pathname == "/projects/") {
+  if (
+    location.pathname == "/projects/" ||
+    location.pathname == "/dash/"
+  ) {
     Object.assign(
       randomColorMode.looksMain,
       ((x) => {
