@@ -5,10 +5,20 @@
     transform-origin: calc(10% + 100px) 125px;
     x: 10%;
   }
+  40% {
+    transform: rotateY(0deg);
+    transform-origin: calc(90% - 100px) 125px;
+    x: calc(90% - 200px);
+  }
   50% {
     transform: rotateY(180deg);
-    transform-origin: calc(90% - 100px) 125px
+    transform-origin: calc(90% - 100px) 125px;
     x: calc(90% - 200px);
+  }
+  90% {
+    transform: rotateY(180deg);
+    transform-origin: calc(10% + 100px) 125px;
+    x: 10%;
   }
 }
 
@@ -39,7 +49,7 @@ div.navigation_picture > div > svg > image {
   transform-origin: calc(10% + 100px) 125px;
   animation: 8s infinite nav-pic_img_animation ease-in-out;
   x: 10%;
-  y: 25;
+  y: 50;
   filter: drop-shadow(25px 5px 15px #00000088);
 }
 
