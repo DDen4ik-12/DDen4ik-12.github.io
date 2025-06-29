@@ -61,7 +61,7 @@ div.content_group.contributors-list {
   border: 2px dashed var(--ui-main-40);
   border-radius: 10px;
   padding: 20px;
-  width: min(calc(100% - 40px), 600px);
+  width: min(calc(100% - 40px), 700px);
   flex-direction: column;
 }
 div.content_group.contributors-list > .button {
