@@ -1,19 +1,14 @@
-@keyframes nav-pic_img_animation-1 {
+@keyframes nav-pic_img_animation {
   0%,
   100% {
-    transform: translateY(40px) rotateZ(10deg) rotateY(50deg);
+    transform: rotateY(0deg);
+    transform-origin: calc(10% + 100px) 125px;
+    x: 10%;
   }
   50% {
-    transform: translateY(-40px) rotateZ(20deg) rotateY(30deg);
-  }
-}
-@keyframes nav-pic_img_animation-2 {
-  0%,
-  100% {
-    transform: translateY(40px) rotateZ(-15deg) rotateY(-20deg);
-  }
-  50% {
-    transform: translateY(-40px) rotateZ(0deg) rotateY(-35deg);
+    transform: rotateY(180deg);
+    transform-origin: calc(90% - 100px) 125px
+    x: calc(90% - 200px);
   }
 }
 
@@ -40,23 +35,12 @@ div.navigation_picture > div > svg > image {
   height: 200px;
 }
 
-div.navigation_picture > div > svg > image:nth-child(1) {
-  transform: translateY(40px) rotateZ(10deg) rotateY(50deg);
-  transform-origin: 10% 125px;
-  animation: 8s infinite nav-pic_img_animation-1 ease-in-out;
-  animation-delay: 0s;
+div.navigation_picture > div > svg > image {
+  transform-origin: calc(10% + 100px) 125px;
+  animation: 8s infinite nav-pic_img_animation ease-in-out;
   x: 10%;
   y: 25;
   filter: drop-shadow(25px 5px 15px #00000088);
-}
-div.navigation_picture > div > svg > image:nth-child(2) {
-  transform: translateY(40px) rotateZ(-15deg) rotateY(-20deg);
-  transform-origin: calc(90% - 200px) 150px;
-  animation: 8s infinite nav-pic_img_animation-2 ease-in-out;
-  animation-delay: 3s;
-  x: calc(90% - 200px);
-  y: 50;
-  filter: drop-shadow(-25px 5px 15px #00000088);
 }
 
 div.content_group.contributors-list {
