@@ -59,7 +59,7 @@ div.navigation_picture > div > svg > image:nth-child(2) {
   filter: drop-shadow(-25px 5px 15px #00000088);
 }
 
-div.content-group.contributors-list {
+div.content_group.contributors-list {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -70,24 +70,24 @@ div.content-group.contributors-list {
   width: min(calc(100% - 40px), 600px);
   flex-direction: column;
 }
-div.content-group.contributors-list > .button {
+div.content_group.contributors-list > .button {
   width: calc(100% - 40px);
   height: 100px;
   flex-direction: row;
 }
-div.content-group.contributors-list > .button.contributor-type1 {
+div.content_group.contributors-list > .button.contributor-type1 {
   --button-hov-bg: #ffd500;
   --button-hov-border: #bf9f00;
 }
-div.content-group.contributors-list > .button.contributor-type2 {
+div.content_group.contributors-list > .button.contributor-type2 {
   --button-hov-bg: #d0ff71;
   --button-hov-border: #a0bb6b;
 }
-div.content-group.contributors-list > .button.contributor-type3 {
+div.content_group.contributors-list > .button.contributor-type3 {
   --button-hov-bg: #7cdaff;
   --button-hov-border: #61a6c1;
 }
-div.content-group.contributors-list > .button > img {
+div.content_group.contributors-list > .button > img {
   width: 100px;
   height: 100%;
 }
