@@ -1,0 +1,74 @@
+html {
+  --looks-main-20: hsl(51deg 100% 20%);
+  --looks-main-30: hsl(51deg 100% 30%);
+  --looks-main-40: hsl(51deg 100% 40%);
+  --looks-main-50: hsl(51deg 100% 50%);
+  --looks-main-60: hsl(51deg 100% 60%);
+  --looks-main-70: hsl(51deg 100% 70%);
+  --looks-main-80: hsl(51deg 100% 80%);
+  --looks-main-90: hsl(51deg 100% 90%);
+  --looks-bg: white;
+  --ui-main-20: hsl(0deg 0% 20%);
+  --ui-main-30: hsl(0deg 0% 30%);
+  --ui-main-40: hsl(0deg 0% 40%);
+  --ui-main-50: hsl(0deg 0% 50%);
+  --ui-main-60: hsl(0deg 0% 60%);
+  --ui-main-70: hsl(0deg 0% 70%);
+  --ui-main-80: hsl(0deg 0% 80%);
+  --ui-main-90: hsl(0deg 0% 90%);
+  --link-40: hsl(30deg 100% 40%);
+  --link-50: hsl(30deg 100% 50%);
+  --link-90: hsl(30deg 100% 90%);
+  --text: hsl(225deg 15% 40%);
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: var(--text);
+  margin: 0;
+  background: linear-gradient(to right, var(--looks-main-90) 0%, var(--looks-bg) 10% 90%, var(--looks-main-90) 100%);
+}
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+.link {
+  background: var(--link-90);
+  color: var(--link-40);
+  border-bottom: 0.125rem dashed var(--link-40);
+  border-radius: 0.5rem;
+  padding-inline: 0.25rem;
+  transition: 0.25s;
+}
+.link:hover {
+  background: var(--link-50);
+  color: white;
+  border-bottom: 0.125rem solid var(--link-40);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 2.5rem
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 0.5rem;
+}
+.scrollable-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--ui-main-60);
+  border: 0.125rem dashed var(--ui-main-40);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: calc(100% - 1rem);
+  overflow-x: auto;
+}

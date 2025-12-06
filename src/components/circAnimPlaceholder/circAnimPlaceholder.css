@@ -1,0 +1,60 @@
+@keyframes circ_anim {
+  0%,
+  100% {
+    r: 2.5rem;
+  }
+  50% {
+    r: 4rem;
+  }
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(45deg, var(--looks-main-50), var(--looks-main-70) 10rem);
+}
+.text {
+  fill: var(--text);
+  transform: translate(50%, 50%);
+  font-size: 3rem;
+  font-weight: bold;
+  text-anchor: middle;
+  alignment-baseline: middle;
+}
+.circ {
+  fill: none;
+  stroke: var(--looks-main-40);
+  stroke-width: 1rem;
+  r: 2.5rem;
+  animation: 8s infinite circ_anim ease-in-out;
+}
+.circ:nth-child(1) {
+  cx: 5%;
+  cy: 20%;
+  animation-delay: 0s;
+}
+.circ:nth-child(2) {
+  cx: 25%;
+  cy: 80%;
+  animation-delay: 0.8s;
+}
+.circ:nth-child(3) {
+  cx: 35%;
+  cy: 0%;
+  animation-delay: 1.6s;
+}
+.circ:nth-child(4) {
+  cx: 95%;
+  cy: 80%;
+  animation-delay: 2.4s;
+}
+.circ:nth-child(5) {
+  cx: 75%;
+  cy: 20%;
+  animation-delay: 3.2s;
+}
+.circ:nth-child(6) {
+  cx: 65%;
+  cy: 100%;
+  animation-delay: 4s;
+}

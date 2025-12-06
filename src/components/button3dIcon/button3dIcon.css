@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--ui-main-90);
+  border-bottom: 0.125rem solid var(--ui-main-60);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  transition: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.img {
+  transform: rotateX(30deg) rotateZ(-15deg) translateY(1.25rem) scale(1.25);
+  filter: drop-shadow(0.125rem 0.5rem 0.25rem #0006);
+  width: 4rem;
+  height: 4rem;
+  transition: 0.5s;
+}
+.main:hover {
+  background: var(--hover-bg-color, var(--looks-main-50));
+  border-bottom: 0.125rem solid var(--hover-border-color, var(--looks-main-40));
+}
+.main:hover > .img {
+  transform: rotateX(0deg) rotateZ(0deg) translateY(0) scale(1.25);
+}

@@ -1,0 +1,22 @@
+.nav {
+  z-index: 10000;
+  position: sticky;
+  top: -10rem;
+  width: 100%;
+  height: 14rem;
+  border-bottom: 0.125rem solid var(--looks-main-40);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  overflow: hidden;
+}
+.panel {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: calc(4rem - 1rem);
+  padding: 0.5rem;
+}
+.logo {
+  height: 100%;
+}

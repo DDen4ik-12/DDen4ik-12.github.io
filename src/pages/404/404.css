@@ -1,0 +1,10 @@
+html {
+  --looks-main-20: hsl(340deg 100% 20%);
+  --looks-main-30: hsl(340deg 100% 30%);
+  --looks-main-40: hsl(340deg 100% 45%);
+  --looks-main-50: hsl(340deg 100% 60%);
+  --looks-main-60: hsl(340deg 100% 70%);
+  --looks-main-70: hsl(340deg 100% 80%);
+  --looks-main-80: hsl(340deg 100% 90%);
+  --looks-main-90: hsl(340deg 100% 95%);
+}
