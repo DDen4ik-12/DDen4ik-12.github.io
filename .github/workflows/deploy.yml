@@ -12,6 +12,8 @@ jobs:
       contents: write
       pages: write
       id-token: write
+    environment:
+      name: github-pages
 
     steps:
       - name: Checkout code
