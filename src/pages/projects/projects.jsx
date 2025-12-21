@@ -17,7 +17,7 @@ const App = () => {
   return (
     <>
       <Navigation>
-        <CircAnimPlaceholder text="Личные проеты" />
+        <CircAnimPlaceholder text="Личные проекты" />
       </Navigation>
       <div className={mainStyles.content}>
         <BlockAndImg imgSrc={scratchProjectsSplash} imgWidth="25%">
