@@ -7,7 +7,7 @@ const Navigation = (props) => {
   return (
     <div className={styles.nav}>
       <div className={styles.panel}>
-        <a href="/" title="Сайт Денчика-12">
+        <a href={props.websiteLink("/")} title="Сайт Денчика-12">
           <img className={styles.logo} src={siteLogo} />
         </a>
       </div>

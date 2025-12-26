@@ -1,5 +1,5 @@
 import scriptIcon from "/assets/script.svg";
-import den4ik12BotIcon from "/assets/den4ik12Bot.png";
+import den4ik12BotIcon from "/assets/den4ik12Bot.svg";
 
 const scratchProjects = [
   {
