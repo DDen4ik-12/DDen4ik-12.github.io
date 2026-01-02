@@ -1,4 +1,5 @@
 html {
+  --looks-main-15: hsl(51deg 100% 15%);
   --looks-main-20: hsl(51deg 100% 20%);
   --looks-main-30: hsl(51deg 100% 30%);
   --looks-main-40: hsl(51deg 100% 40%);
@@ -66,9 +67,27 @@ a {
   align-items: center;
   gap: 0.5rem;
   background: var(--ui-main-60);
-  border: 0.125rem dashed var(--ui-main-40);
+  border: 0.125rem dashed var(--ui-main-50);
   border-radius: 0.5rem;
   padding: 0.5rem;
   width: calc(100% - 1rem);
   overflow-x: auto;
+}
+.input-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--ui-main-90);
+  border: none;
+  border-top: 0.125rem solid var(--ui-main-60);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "Noto Sans", sans-serif;
+  color: var(--text);
+  outline: none;
+  transition: 0.5s;
+}
+.input-main:hover, .input-main:active, .input-main:focus {
+  box-shadow: inset var(--ui-main-80) 0 0 0.5rem 0.35rem;
+  border-top: 0.125rem solid var(--ui-main-40);
 }

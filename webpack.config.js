@@ -3,6 +3,8 @@ import { fileURLToPath } from "url";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 
+const titleStart = "Сайт Денчика-12 | ";
+
 console.log(
   "Build will be stored in:",
   path.resolve(path.dirname(fileURLToPath(import.meta.url)), "dist"),
@@ -56,26 +58,32 @@ export default {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      chunks: ["index"],
-      template: "./src/pages/index/index.html",
-      filename: "index.html",
-    }),
-    new HtmlWebpackPlugin({
-      chunks: ["404"],
-      template: "./src/pages/404/404.html",
-      filename: "404.html",
-    }),
-    new HtmlWebpackPlugin({
-      chunks: ["projects"],
-      template: "./src/pages/projects/projects.html",
-      filename: "projects/index.html",
-    }),
     new CopyWebpackPlugin({
       patterns: [{
         from: "static",
         to: "",
       }]
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["index"],
+      template: "./src/layout.ejs",
+      filename: "index.html",
+      title: `${titleStart}Главная`,
+      themeColor: "#ffd900",
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["404"],
+      template: "./src/layout.ejs",
+      filename: "404.html",
+      title: `${titleStart}Ошибка 404`,
+      themeColor: "#ff3377",
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["projects"],
+      template: "./src/layout.ejs",
+      filename: "projects/index.html",
+      title: `${titleStart}Личные проекты`,
+      themeColor: "#00ff08",
     }),
   ],
   devServer: {

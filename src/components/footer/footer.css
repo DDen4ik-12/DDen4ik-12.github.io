@@ -15,7 +15,7 @@
   margin: 0.5rem;
   padding: 1rem;
   gap: 1rem;
-  background: var(--looks-main-20);
+  background: var(--looks-main-15);
   color: white;
   border-radius: 0.5rem;
 }
@@ -31,8 +31,8 @@
 .button-main {
   display: flex;
   align-items: center;
-  background: var(--looks-main-40);
-  border-bottom: 0.125rem solid var(--looks-main-30);
+  background: var(--looks-main-30);
+  border-bottom: 0.125rem solid var(--looks-main-20);
   border-radius: 0.5rem;
   padding: 0.65rem 1rem;
   width: fit-content;
@@ -45,7 +45,7 @@
   height: 2rem;
 }
 .button-main:hover {
-  background: var(--hover-bg-color, var(--looks-main-50));
+  box-shadow: inset var(--hover-bg-color, var(--looks-main-50)) 0 0 0.5rem 0.35rem;
   border-bottom: 0.125rem solid var(--hover-border-color, var(--looks-main-40));
 }
 .button-main:hover > .button-img {

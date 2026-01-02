@@ -1,4 +1,5 @@
 html {
+  --looks-main-15: hsl(340deg 100% 15%);
   --looks-main-20: hsl(340deg 100% 20%);
   --looks-main-30: hsl(340deg 100% 30%);
   --looks-main-40: hsl(340deg 100% 45%);

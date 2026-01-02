@@ -3,7 +3,7 @@
   align-items: center;
   gap: 1rem;
   background: var(--ui-main-90);
-  border-bottom: 0.125rem solid var(--ui-main-60);
+  border-bottom: 0.125rem solid var(--ui-main-70);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   width: fit-content;
@@ -19,7 +19,7 @@
   transition: 0.5s;
 }
 .main:hover {
-  background: var(--hover-bg-color, var(--looks-main-50));
+  box-shadow: inset var(--hover-bg-color, var(--looks-main-50)) 0 0 0.5rem 0.35rem;
   border-bottom: 0.125rem solid var(--hover-border-color, var(--looks-main-40));
 }
 .main:hover > .img {

@@ -52,8 +52,8 @@ const Footer = () => {
           imgSrc={telegramLogo}
           title="Мой ТГК"
           href="https://t.me/d_den4ik_12_base"
-          bgColor="#bae8ff"
-          borderColor="#6b8694"
+          bgColor="#26a5e4"
+          borderColor="#186a92"
         />
       </div>
     </footer>

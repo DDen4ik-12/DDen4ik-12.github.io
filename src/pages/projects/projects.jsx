@@ -18,8 +18,9 @@ const Content = (props) => {
         <h1>Рекомендуемые мои Scratch-проекты:</h1>
       </BlockAndImg>
       <div className={mainStyles.scrollableList}>
-        {scratchProjects.map((project) => (
+        {scratchProjects.map((project, i) => (
           <BigButton
+            key={i}
             imgSrc={gamepadIcon}
             href={`https://scratch.mit.edu/projects/${project.id}`}
             bgColor={project.bgColor}
@@ -34,8 +35,9 @@ const Content = (props) => {
         <h1>Остальные проекты:</h1>
       </BlockAndImg>
       <div className={mainStyles.scrollableList}>
-        {otherProjects.map((project) => (
+        {otherProjects.map((project, i) => (
           <BigButton
+            key={i}
             imgSrc={project.img}
             href={project.link}
             download={project.download}
