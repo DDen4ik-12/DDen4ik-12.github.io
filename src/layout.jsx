@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
+import { useLocalization } from "@fluent/react";
+import { L10nProviderHOC } from "./components/l10nProviderHOC.jsx";
 import Navigation from "./components/navigation/navigation.jsx";
 import Footer from "./components/footer/footer.jsx";
 
 import * as styles from "./main.css";
 
-const Layout = (props) => {
+function Layout(props) {
+  const { l10n } = useLocalization();
+
+  useEffect(() => {
+    document.title = l10n.getString("website-title", {
+      pageName: l10n.getString(props.pageNameId),
+    });
+  }, [props.currentLocales]);
+
   return (
     <>
-      <Navigation websiteLink={props.websiteLink}>
+      <Navigation
+        websiteLink={props.websiteLink}
+        changeLocales={props.changeLocales}
+        currentLocales={props.currentLocales}
+      >
         {props.placeholder}
       </Navigation>
       <div className={styles.content}>
@@ -18,6 +32,8 @@ const Layout = (props) => {
     </>
   );
 };
+const WrappedLayout = L10nProviderHOC(Layout);
+
 const applyRandColMode = () => {
   const looksMainHue = Math.floor(Math.random() * 360);
   const looksMainSat = Math.floor(Math.random() * 101);
@@ -26,6 +42,7 @@ const applyRandColMode = () => {
   const style = document.createElement("style");
   style.textContent =
     `html {
+      --looks-main-15: hsl(${looksMainHue}deg ${looksMainSat}% 15%);
       --looks-main-20: hsl(${looksMainHue}deg ${looksMainSat}% 20%);
       --looks-main-30: hsl(${looksMainHue}deg ${looksMainSat}% 30%);
       --looks-main-40: hsl(${looksMainHue}deg ${looksMainSat}% 40%);
@@ -44,7 +61,7 @@ const applyRandColMode = () => {
   metaThemeColor.content = `hsl(${looksMainHue}deg ${looksMainSat}% 50%)`;
 };
 
-export default (placeholder, Content) => {
+export default (placeholder, Content, pageNameId) => {
   const randColMode =
     ((new URL(location.href)).searchParams.get("randCol") ?? undefined) != undefined;
   const websiteLink = (ogLink) => {
@@ -58,8 +75,12 @@ export default (placeholder, Content) => {
 
   const root = ReactDOM.createRoot(document.getElementById("root"));
   root.render(
-    <Layout placeholder={placeholder} websiteLink={websiteLink}>
+    <WrappedLayout
+      placeholder={placeholder}
+      websiteLink={websiteLink}
+      pageNameId={pageNameId}
+    >
       <Content mainStyles={styles} websiteLink={websiteLink} />
-    </Layout>
+    </WrappedLayout>
   );
 };

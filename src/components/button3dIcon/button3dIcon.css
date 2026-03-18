@@ -13,7 +13,7 @@
 }
 .img {
   transform: rotateX(30deg) rotateZ(-15deg) translateY(1.25rem) scale(1.25);
-  filter: drop-shadow(0.125rem 0.5rem 0.25rem #0006);
+  filter: drop-shadow(0.125rem 0.5rem 0.25rem var(--ui-black-dim));
   width: 4rem;
   height: 4rem;
   transition: 0.5s;

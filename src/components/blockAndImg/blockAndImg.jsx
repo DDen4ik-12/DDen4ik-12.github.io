@@ -2,7 +2,7 @@ import React from "react";
 
 import * as styles from "./blockAndImg.css";
 
-const BlockAndImg = (props) => {
+function BlockAndImg(props) {
   return props.imgToRight ? (
     <div className={styles.main}>
       <div className={styles.block}>

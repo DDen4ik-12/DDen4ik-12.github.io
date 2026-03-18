@@ -2,7 +2,7 @@ import React from "react";
 
 import * as styles from "./bigButton.css";
 
-const BigButton = (props) => {
+function BigButton(props) {
   const main = (
     <div
       className={styles.main}

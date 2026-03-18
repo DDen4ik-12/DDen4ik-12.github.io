@@ -1,4 +1,5 @@
 import React from "react";
+import { Localized } from "@fluent/react";
 import useLayout from "../../layout.jsx";
 import CircAnimPlaceholder from "../../components/circAnimPlaceholder/circAnimPlaceholder.jsx";
 import BlockAndImg from "../../components/blockAndImg/blockAndImg.jsx";
@@ -7,34 +8,60 @@ import Button3dIcon from "../../components/button3dIcon/button3dIcon.jsx";
 import * as styles from "../../main.css";
 import helloSplash from "/assets/helloSplash.svg";
 import windowIcon from "/assets/window.svg";
-import dashMascotDashy from "/assets/dashMascotDashy.svg";
+import dashLogo from "/assets/dashLogoMini.svg";
 
-const Content = (props) => {
+function Content(props) {
   return (
     <>
       <BlockAndImg imgSrc={helloSplash} imgWidth="45%">
-        <h1>Добро пожаловать!</h1>
-        <div>Это сайт, принадлежащий чуваку под никнеймом Денчик-12 (англ. - Den4ik-12)</div>
-        <div>Я создатель нескольких юзерскриптов, небольших игр и соавтор Dash - модификации Scratch</div>
-        <div>Сейчас Вы находитесь на <a className={styles.link} href={props.websiteLink("/")}>главной странице сайта</a></div>
+        <Localized
+          id="page-index_welcome-block_1"
+          elems={{ h1: <h1 />, div: <div /> }}
+        >
+          <></>
+        </Localized>
+        <Localized
+          id="page-index_welcome-block_2"
+          elems={{
+            indexPageLink: <a className={styles.link} href={props.websiteLink("/")} />,
+          }}
+        >
+          <div />
+        </Localized>
       </BlockAndImg>
-      <h1>Категории:</h1>
+      <Localized id="page-index_categories">
+        <h1 />
+      </Localized>
       <div className={styles.grid}>
-        <Button3dIcon
-          imgSrc={windowIcon}
-          text="Личные проекты"
-          href={props.websiteLink("/projects")}
-        />
-        <Button3dIcon
-          imgSrc={dashMascotDashy}
-          text="Dash"
-          href="https://dashblocks.github.io"
-          bgColor="#ff8f4d"
-          borderColor="#b96838"
-        />
+        <Localized
+          id="page-projects_nav-placeholder"
+          attrs={{ text: true }}
+        >
+          <Button3dIcon imgSrc={windowIcon} href={props.websiteLink("/projects")} />
+        </Localized>
+        <Localized
+          id="page-index_categories_button-dash"
+          attrs={{ text: true }}
+        >
+          <Button3dIcon
+            imgSrc={dashLogo}
+            href="https://dashblocks.github.io"
+            bgColor="#ff8f4d"
+            borderColor="#b96838"
+          />
+        </Localized>
       </div>
     </>
   );
 };
 
-useLayout(<CircAnimPlaceholder text="Главная страница" />, Content);
+useLayout(
+  <Localized
+    id="page-index_nav-placeholder"
+    attrs={{ text: true }}
+  >
+    <CircAnimPlaceholder />
+  </Localized>,
+  Content,
+  "page-index_name"
+);

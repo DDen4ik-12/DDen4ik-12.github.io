@@ -11,6 +11,7 @@
 }
 .panel {
   display: flex;
+  gap: 0.5rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -19,4 +20,45 @@
 }
 .logo {
   height: 100%;
+}
+.menu-wrapper {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  transform: translateX(-1rem);
+}
+.menu {
+  position: relative;
+  top: calc(4rem + 0.125rem + 0.25rem);
+  box-shadow: 0rem 0.25rem 0.5rem var(--ui-black-dim);
+  background: var(--looks-main-80);
+  border: 0.125rem solid var(--looks-main-60);
+  border-radius: 0.5rem;
+  width: max-content;
+  max-height: calc(100vh - 10rem);
+  overflow-y: overlay;
+  transition: 0.25s;
+}
+.menu.menu-closed {
+  top: calc((4rem + 0.125rem + 0.25rem) / 2);
+  visibility: hidden;
+  opacity: 0;
+}
+.menu-item {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.menu-item:hover {
+  background: var(--ui-black-transparent);
+}
+.button-menu-open {
+  box-shadow: inset var(--hover-bg-color, var(--looks-main-50)) 0 0 0.5rem 0.35rem;
+  border-bottom: 0.125rem solid var(--hover-border-color, var(--looks-main-40));
+}
+.checkmark {
+  opacity: 0
+}
+.checkmark.checkmark-choosen {
+  opacity: 1;
 }

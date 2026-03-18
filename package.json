@@ -2,8 +2,12 @@
   "private": true,
   "homepage": "https://dden4ik-12.github.io",
   "dependencies": {
+    "@fluent/bundle": "^0.19.1",
+    "@fluent/langneg": "^0.7.0",
+    "@fluent/react": "^0.15.2",
     "copy-webpack-plugin": "^13.0.1",
     "css-loader": "^7.1.2",
+    "raw-loader": "^4.0.2",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "style-loader": "^4.0.0",

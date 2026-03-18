@@ -1,9 +1,9 @@
 import React from "react";
 import classNames from "../../utils/classNames.js";
 
-import * as styles from "./button3dIcon.css";
+import * as styles from "./normalButton.css";
 
-function Button3dIcon({ className, bgColor, borderColor, text, imgSrc, href, ...props }) {
+function NormalButton({ className, bgColor, borderColor, href, children, ...props }) {
   const main = (
     <div
       className={classNames(styles.main, className)}
@@ -14,8 +14,7 @@ function Button3dIcon({ className, bgColor, borderColor, text, imgSrc, href, ...
       }}
       {...props}
     >
-      <span>{text}</span>
-      <img className={styles.img} src={imgSrc} />
+      {children}
     </div>
   );
   return href == undefined ? main : (
@@ -25,4 +24,4 @@ function Button3dIcon({ className, bgColor, borderColor, text, imgSrc, href, ...
   );
 };
 
-export default Button3dIcon;
+export default NormalButton;

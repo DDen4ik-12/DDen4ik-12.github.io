@@ -3,7 +3,7 @@ import { fileURLToPath } from "url";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 
-const titleStart = "Сайт Денчика-12 | ";
+const titleStart = "Den4ik-12's Site |";
 
 console.log(
   "Build will be stored in:",
@@ -37,6 +37,10 @@ export default {
         },
       },
       {
+        test: /\.(ftl)$/,
+        loader: "raw-loader",
+      },
+      {
         test: /\.(css)$/,
         use: [
           {
@@ -68,21 +72,21 @@ export default {
       chunks: ["index"],
       template: "./src/layout.ejs",
       filename: "index.html",
-      title: `${titleStart}Главная`,
+      title: `${titleStart} General`,
       themeColor: "#ffd900",
     }),
     new HtmlWebpackPlugin({
       chunks: ["404"],
       template: "./src/layout.ejs",
       filename: "404.html",
-      title: `${titleStart}Ошибка 404`,
+      title: `${titleStart} Error 404`,
       themeColor: "#ff3377",
     }),
     new HtmlWebpackPlugin({
       chunks: ["projects"],
       template: "./src/layout.ejs",
       filename: "projects/index.html",
-      title: `${titleStart}Личные проекты`,
+      title: `${titleStart} Projects`,
       themeColor: "#00ff08",
     }),
   ],

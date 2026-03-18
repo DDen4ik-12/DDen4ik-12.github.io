@@ -2,7 +2,7 @@ import React from "react";
 
 import * as styles from "./circAnimPlaceholder.css";
 
-const CircAnimPlaceholder = (props) => {
+function CircAnimPlaceholder(props) {
   return (
     <svg className={styles.main}>
       <circle className={styles.circ} />
