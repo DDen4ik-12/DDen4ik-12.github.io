@@ -22,7 +22,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -37,11 +37,11 @@ export default {
         },
       },
       {
-        test: /\.(ftl)$/,
+        test: /\.ftl$/,
         loader: "raw-loader",
       },
       {
-        test: /\.(css)$/,
+        test: /\.(post)?css$/,
         use: [
           {
             loader: "style-loader",
@@ -55,6 +55,14 @@ export default {
                 exportLocalsConvention: "camel-case-only",
               },
               importLoaders: 1,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["postcss-import", "postcss-mixins"],
+              },
             },
           },
         ],

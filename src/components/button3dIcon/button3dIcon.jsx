@@ -3,14 +3,13 @@ import classNames from "../../utils/classNames.js";
 
 import * as styles from "./button3dIcon.css";
 
-function Button3dIcon({ className, bgColor, borderColor, text, imgSrc, href, ...props }) {
+function Button3dIcon({ className, bgColor, text, imgSrc, href, ...props }) {
   const main = (
     <div
       className={classNames(styles.main, className)}
       role="button"
       style={{
         "--hover-bg-color": bgColor,
-        "--hover-border-color": borderColor
       }}
       {...props}
     >

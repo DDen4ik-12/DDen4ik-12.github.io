@@ -1,3 +1,5 @@
+@import "../../utils/mixins.css";
+
 @keyframes circ_anim {
   0%,
   100% {
@@ -9,17 +11,12 @@
 }
 
 .main {
+  @mixin glass-style-nav;
   width: 100%;
   height: 100%;
   background: repeating-linear-gradient(45deg, var(--looks-main-50), var(--looks-main-70) 10rem);
-}
-.text {
-  fill: var(--text);
-  transform: translate(50%, 50%);
-  font-size: 3rem;
-  font-weight: bold;
-  text-anchor: middle;
-  alignment-baseline: middle;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 .circ {
   fill: none;
@@ -34,27 +31,17 @@
   animation-delay: 0s;
 }
 .circ:nth-child(2) {
-  cx: 25%;
-  cy: 80%;
-  animation-delay: 0.8s;
-}
-.circ:nth-child(3) {
-  cx: 35%;
+  cx: 37%;
   cy: 0%;
   animation-delay: 1.6s;
 }
-.circ:nth-child(4) {
+.circ:nth-child(3) {
   cx: 95%;
   cy: 80%;
   animation-delay: 2.4s;
 }
-.circ:nth-child(5) {
-  cx: 75%;
-  cy: 20%;
-  animation-delay: 3.2s;
-}
-.circ:nth-child(6) {
-  cx: 65%;
+.circ:nth-child(4) {
+  cx: 63%;
   cy: 100%;
   animation-delay: 4s;
 }

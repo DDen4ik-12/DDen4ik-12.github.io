@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import ReactDOM from "react-dom/client";
 import { useLocalization } from "@fluent/react";
-import { L10nProviderHOC } from "./components/l10nProviderHOC.jsx";
+import { ThemeProviderHOC } from "./components/themeProviderHOC/themeProviderHOC.jsx";
+import { L10nProviderHOC, L10nProviderCtx } from "./components/l10nProviderHOC.jsx";
 import Navigation from "./components/navigation/navigation.jsx";
 import Footer from "./components/footer/footer.jsx";
 
@@ -9,22 +10,21 @@ import * as styles from "./main.css";
 
 function Layout(props) {
   const { l10n } = useLocalization();
+  const { currentLocales } = useContext(L10nProviderCtx);
+  const StartBlock = props.startBlock;
 
   useEffect(() => {
     document.title = l10n.getString("website-title", {
       pageName: l10n.getString(props.pageNameId),
     });
-  }, [props.currentLocales]);
+  }, [currentLocales]);
 
   return (
     <>
-      <Navigation
-        websiteLink={props.websiteLink}
-        changeLocales={props.changeLocales}
-        currentLocales={props.currentLocales}
-      >
+      <Navigation websiteLink={props.websiteLink}>
         {props.placeholder}
       </Navigation>
+      <StartBlock websiteLink={props.websiteLink} />
       <div className={styles.content}>
         {props.children}
       </div>
@@ -32,7 +32,7 @@ function Layout(props) {
     </>
   );
 };
-const WrappedLayout = L10nProviderHOC(Layout);
+const WrappedLayout = ThemeProviderHOC(L10nProviderHOC(Layout));
 
 const applyRandColMode = () => {
   const looksMainHue = Math.floor(Math.random() * 360);
@@ -41,19 +41,17 @@ const applyRandColMode = () => {
 
   const style = document.createElement("style");
   style.textContent =
-    `html {
-      --looks-main-15: hsl(${looksMainHue}deg ${looksMainSat}% 15%);
-      --looks-main-20: hsl(${looksMainHue}deg ${looksMainSat}% 20%);
-      --looks-main-30: hsl(${looksMainHue}deg ${looksMainSat}% 30%);
-      --looks-main-40: hsl(${looksMainHue}deg ${looksMainSat}% 40%);
-      --looks-main-50: hsl(${looksMainHue}deg ${looksMainSat}% 50%);
-      --looks-main-60: hsl(${looksMainHue}deg ${looksMainSat}% 60%);
-      --looks-main-70: hsl(${looksMainHue}deg ${looksMainSat}% 70%);
-      --looks-main-80: hsl(${looksMainHue}deg ${looksMainSat}% 80%);
-      --looks-main-90: hsl(${looksMainHue}deg ${looksMainSat}% 90%);
-      --link-40: hsl(${linkHue}deg 100% 40%);
-      --link-50: hsl(${linkHue}deg 100% 50%);
-      --link-90: hsl(${linkHue}deg 100% 90%);
+    `:root {
+      --default-looks-main-30: hsl(${looksMainHue}deg ${looksMainSat}% 30%);
+      --default-looks-main-40: hsl(${looksMainHue}deg ${looksMainSat}% 40%);
+      --default-looks-main-50: hsl(${looksMainHue}deg ${looksMainSat}% 50%);
+      --default-looks-main-60: hsl(${looksMainHue}deg ${looksMainSat}% 60%);
+      --default-looks-main-70: hsl(${looksMainHue}deg ${looksMainSat}% 70%);
+      --default-link-15: hsl(${linkHue}deg 100% 15%);
+      --default-link-40: hsl(${linkHue}deg 100% 40%);
+      --default-link-50: hsl(${linkHue}deg 100% 50%);
+      --default-link-60: hsl(${linkHue}deg 100% 60%);
+      --default-link-90: hsl(${linkHue}deg 100% 90%);
     }`;
   document.head.appendChild(style);
 
@@ -61,7 +59,7 @@ const applyRandColMode = () => {
   metaThemeColor.content = `hsl(${looksMainHue}deg ${looksMainSat}% 50%)`;
 };
 
-export default (placeholder, Content, pageNameId) => {
+export default (placeholder, StartBlock, Content, pageNameId) => {
   const randColMode =
     ((new URL(location.href)).searchParams.get("randCol") ?? undefined) != undefined;
   const websiteLink = (ogLink) => {
@@ -77,10 +75,11 @@ export default (placeholder, Content, pageNameId) => {
   root.render(
     <WrappedLayout
       placeholder={placeholder}
+      startBlock={StartBlock}
       websiteLink={websiteLink}
       pageNameId={pageNameId}
     >
-      <Content mainStyles={styles} websiteLink={websiteLink} />
+      <Content websiteLink={websiteLink} />
     </WrappedLayout>
   );
 };

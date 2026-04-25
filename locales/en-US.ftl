@@ -20,6 +20,13 @@ page-index_name = General
 page-projects_name = Projects
 page-404_name = Error 404
 
+# Button titles
+button_install = Install
+button_learn-more = Learn more
+button_try-out = Try out
+button_play = Play
+button_open = Open
+
 # Projects
 projects_dash =
   .name = DashBlocks (Dash)
@@ -54,35 +61,35 @@ projects_maps =
 projects_sfv-fix =
   .name = Scratch Follow Viewports Fix
   .desc = A userscript for the Scratch website that returns the previous display of Scratchers in the "Followers" and "Following" sections on your profile page
+projects_some-gh-utils =
+  .name = Some GitHub Utils
+  .desc = A userscript for the GitHub website that add some utils
 
 # "index" page content
-page-index_nav-placeholder =
-  .text = {page-index_name}
-page-index_welcome-block_1 =
-  <h1>Welcome!</h1>
-  <div>This is a website owned by a dude under the nickname {-d12-name()}</div>
-  <div>I'm a developer of some userscripts, small games and projects</div>
-page-index_welcome-block_2 = You're currently on the <indexPageLink>general page</indexPageLink> of the site
-page-index_categories = Categories:
-page-index_categories_button-dash =
-  .text = Dash
+page-index_start-block_1 = Hello, I'm <nameGradient>{-d12-name()}</nameGradient>!
+page-index_start-block_2 =
+  <h3>I'm a developer of some userscripts, small games and projects</h3>
+  <h3>This website is a small corner where my personal and collaborative projects are collected, and it serves as a unifying link for all the places where I am</h3>
+page-index_sections_projects = {page-projects_name}
+page-index_sections_projects_more =
+  .text = More projects
+page-index_sections_skills = My skills includes
+page-index_sections_future-skills = In the plan/process of learning
+page-index_sections_github-stats = My GitHub stats
 
 # "projects" page content
-page-projects_nav-placeholder =
-  .text = {page-projects_name}
-page-projects_main-projects = Main projects:
-page-projects_scratch-projects = Recomended my Scratch projects:
-page-projects_dash-extensions = Extensions for Dash:
-page-projects_userscripts = Userscripts:
-page-projects_other-projects = Other projects:
+page-projects_start-block_1 = {page-projects_name}
+page-projects_start-block_2 = <h3>Here collected my personal and collaborative projects: Dash, userscripts, extensions, small games and bot</h3>
+page-projects_main-projects = Main projects
+page-projects_scratch-projects = Recomended my Scratch projects
+page-projects_dash-extensions = Extensions for Dash
+page-projects_userscripts = Userscripts
+page-projects_other-projects = Other projects
 
 # "404" page content
-page-404_nav-placeholder =
-  .text = {page-404_name}
-page-404_error-block_1 =
-  <h1>Woah, an error 404!</h1>
-  <div>There could have been an interesting page here, but {-d12-name()} didn't create it at this URL</div>
-page-404_error-block_2 = So, go back to the <indexPageLink>general page</indexPageLink> of the site, or...
+page-404_start-block_1 = Uh oh, an error 404!
+page-404_start-block_2 = <h3>There could have been an interesting page here, but {-d12-name()} didn't create it at this URL</h3>
+page-404_start-block_3 = So, go back to the <indexPageLink>general page</indexPageLink> of the site, or...
 page-404_clicker-button =
   .text =
     {$clicks ->

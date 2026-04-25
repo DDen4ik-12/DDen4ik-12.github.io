@@ -1,0 +1,74 @@
+.name-gradient {
+  --outline-filter: url(
+    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><filter id='outline'><feMorphology in='SourceAlpha' result='expanded' operator='dilate' radius='1.5'/><feFlood flood-color='white' result='white'/><feComposite in='white' in2='expanded' operator='in' result='outline'/><feMerge><feMergeNode in='outline'/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#outline"
+  );
+  background: linear-gradient(
+    to right,
+    #0012b8 0%,
+    #0066ff 50%,
+    #00ff1b 100%
+  );
+  background-clip: text;
+  color: transparent;
+  filter: var(--outline-filter);
+  user-select: none;
+}
+.og-name {
+  font-size: 1rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  align-items: stretch;
+  justify-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+@media (max-width: 30rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.button-thumb {
+  aspect-ratio: 5 / 3;
+  background: linear-gradient(
+    45deg,
+    var(--color, var(--looks-main-50)) 0%,
+    color-mix(
+      in srgb,
+      var(--color, var(--looks-main-50)),
+      var(--looks-bg) 30%
+    ) 100%
+  );
+  border: 0.125rem solid var(--ui-black-transparent);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  height: calc(5rem - 1rem);
+}
+.button-thumb > img {
+  aspect-ratio: 5 / 3;
+  width: 100%;
+}
+.github-stats-embed {
+  width: 100%;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 11rem);
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color);
+  border: 0.125rem solid var(--color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.skill > img {
+  width: 1.25rem;
+  height: 1.25rem;
+}

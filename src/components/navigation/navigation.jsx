@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Localized } from "@fluent/react";
 import NormalButton from "../normalButton/normalButton.jsx";
-import { allLocales } from "../l10nProviderHOC.jsx";
+import { ThemeProviderCtx } from "../themeProviderHOC/themeProviderHOC.jsx";
+import { allLocales, L10nProviderCtx } from "../l10nProviderHOC.jsx";
 import classNames from "../../utils/classNames.js";
 
 import * as styles from "./navigation.css";
@@ -19,10 +20,13 @@ function Menu(props) {
 };
 
 function Navigation(props) {
+  const { darkMode, setDarkMode } = useContext(ThemeProviderCtx);
+  const { changeLocales, currentLocales } = useContext(L10nProviderCtx);
   let [langMenuOpen, setLangMenuOpen] = useState(false);
 
   return (
     <div className={styles.nav}>
+      {props.children}
       <div className={styles.panel}>
         <Localized
           id="navigation_logo-title"
@@ -32,28 +36,30 @@ function Navigation(props) {
             <img className={styles.logo} src={siteLogo} />
           </a>
         </Localized>
-        <NormalButton
-          className={classNames({
-            [styles.buttonMenuOpen]: langMenuOpen
-          })}
-          onClick={() => setLangMenuOpen(!langMenuOpen)}
-          bgColor="var(--looks-main-40)"
-          borderColor="var(--looks-main-30)"
-        >
+        <div className={styles.buttonAndMenuWrapper}>
+          <NormalButton
+            className={classNames({
+              [styles.buttonMenuOpen]: langMenuOpen
+            })}
+            onClick={() => setLangMenuOpen(!langMenuOpen)}
+            bgColor="var(--looks-main-40)"
+          >
+            <img className={styles.grayIcon} src={langIcon} />
+            {"▾" /* TODO: Make asset for arrow */}
+          </NormalButton>
           <Menu opened={langMenuOpen}>
             {Object.entries(allLocales).map(([code, [name]]) => (
               <div
                 key={code}
                 className={styles.menuItem}
-                onClick={(event) => {
-                  event.stopPropagation();
-                  props.changeLocales([code], true);
+                onClick={() => {
+                  changeLocales([code], true);
                   setLangMenuOpen(false);
                 }}
               >
                 <div
                   className={classNames(styles.checkmark, {
-                    [styles.checkmarkChoosen]: code == props.currentLocales[0]
+                    [styles.checkmarkChoosen]: code == currentLocales[0]
                   })}
                 >
                   {"✔" /* TODO: Make asset for checkmark */}
@@ -62,11 +68,14 @@ function Navigation(props) {
               </div>
             ))}
           </Menu>
-          <img src={langIcon} />
-          {"▾" /* TODO: Make asset for arrow */}
+        </div>
+        <NormalButton
+          onClick={() => setDarkMode(!darkMode)}
+          bgColor="var(--looks-main-40)"
+        >
+          {darkMode ? "☀" : "🌙"}
         </NormalButton>
       </div>
-      {props.children}
     </div>
   );
 };

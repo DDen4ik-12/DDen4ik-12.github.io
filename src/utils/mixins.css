@@ -1,0 +1,27 @@
+@define-mixin glass-style {
+  background: var(--ui-glass);
+  backdrop-filter: blur(0.5rem);
+  border: 0.125rem solid var(--ui-black-transparent);
+  box-shadow: var(--ui-glass-shadow);
+}
+
+@define-mixin glass-style-dark {
+  background: var(--ui-glass-dark);
+  backdrop-filter: blur(0.5rem);
+  border: 0.125rem solid var(--ui-black-transparent);
+  box-shadow: var(--ui-glass-shadow);
+}
+
+@define-mixin glass-style-nav {
+  background: var(--ui-glass);
+  backdrop-filter: blur(0.5rem);
+  border-bottom: 0.125rem solid var(--ui-black-transparent);
+  box-shadow: var(--ui-glass-shadow);
+}
+
+@define-mixin glass-style-footer {
+  background: var(--ui-glass);
+  backdrop-filter: blur(0.5rem);
+  border: 0.125rem solid var(--ui-black-transparent);
+  box-shadow: var(--ui-glass-shadow);
+}

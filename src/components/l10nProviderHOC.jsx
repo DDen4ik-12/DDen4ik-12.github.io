@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createContext } from "react";
 import { FluentBundle, FluentResource } from "@fluent/bundle";
 import { negotiateLanguages } from "@fluent/langneg";
-import { LocalizationProvider, ReactLocalization, Localized } from "@fluent/react";
-
-import enUsLocale from "/locales/en-US.ftl";
-import ruLocale from "/locales/ru.ftl";
+import { LocalizationProvider, ReactLocalization } from "@fluent/react";
 
 const savedLocaleKey = "lang";
 const defaultLocale = "en-US";
 const allLocales = {
-  "en-US": ["English (USA)", new FluentResource(enUsLocale)],
-  ru: ["Русский", new FluentResource(ruLocale)],
+  "en-US": ["English (USA)", new FluentResource(require("/locales/en-US.ftl").default)],
+  ru: ["Русский", new FluentResource(require("/locales/ru.ftl").default)],
 };
 function* generateBundles(locales) {
   for (const locale of locales) {
@@ -19,6 +16,8 @@ function* generateBundles(locales) {
     yield bundle;
   }
 }
+
+const L10nProviderCtx = createContext(null);
 
 const savedLocale = localStorage.getItem(savedLocaleKey);
 
@@ -48,15 +47,13 @@ function L10nProviderHOC(Content) {
     if (l10n == null) return <div>Loading...</div>;
     return (
       <LocalizationProvider l10n={l10n}>
-        <Content
-          changeLocales={changeLocales}
-          currentLocales={currentLocales}
-          {...props}
-        />
+        <L10nProviderCtx value={{ changeLocales, currentLocales }}>
+          <Content {...props} />
+        </L10nProviderCtx>
       </LocalizationProvider>
     );
   };
   return L10nProvider;
 };
 
-export { allLocales, L10nProviderHOC };
+export { allLocales, L10nProviderHOC, L10nProviderCtx };

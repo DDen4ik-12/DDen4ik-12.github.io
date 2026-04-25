@@ -1,3 +1,5 @@
+@import "../../utils/mixins.css";
+
 @keyframes button_anim {
   0%,
   100% {
@@ -9,19 +11,19 @@
 }
 
 .footer {
+  @mixin glass-style-footer;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0.5rem;
   padding: 1rem;
   gap: 1rem;
-  background: var(--looks-main-15);
-  color: white;
   border-radius: 0.5rem;
 }
 .footer > * {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   width: 100%;
 }
@@ -29,10 +31,13 @@
   height: 2rem;
 }
 .button-main {
+  @mixin glass-style-dark;
+  --hover-shadow:
+    var(--ui-glass-shadow),
+    inset var(--hover-bg-color, var(--looks-main-50)) 0 0 0.25rem 0.2rem,
+    var(--hover-bg-color, var(--looks-main-50)) 0 0 0.25rem 0.05rem;
   display: flex;
   align-items: center;
-  background: var(--looks-main-30);
-  border-bottom: 0.125rem solid var(--looks-main-20);
   border-radius: 0.5rem;
   padding: 0.65rem 1rem;
   width: fit-content;
@@ -44,9 +49,17 @@
   width: 2rem;
   height: 2rem;
 }
+.icon-white {
+  filter: var(--white-icon-filter);
+}
 .button-main:hover {
-  box-shadow: inset var(--hover-bg-color, var(--looks-main-50)) 0 0 0.5rem 0.35rem;
-  border-bottom: 0.125rem solid var(--hover-border-color, var(--looks-main-40));
+  background: color-mix(
+    in srgb,
+    var(--ui-glass-dark),
+    var(--hover-bg-color, var(--looks-main-50)) 40%
+  );
+  border-color: var(--hover-bg-color, var(--looks-main-50));
+  box-shadow: var(--hover-shadow);
 }
 .button-main:hover > .button-img {
   animation: 0.5s button_anim cubic-bezier(0.07, 0.96, 0.37, 2.07);

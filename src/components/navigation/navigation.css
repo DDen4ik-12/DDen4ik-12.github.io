@@ -1,13 +1,12 @@
+@import "../../utils/mixins.css";
+
 .nav {
   z-index: 10000;
   position: sticky;
-  top: -10rem;
+  top: 0;
   width: 100%;
-  height: 14rem;
-  border-bottom: 0.125rem solid var(--looks-main-40);
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  overflow: hidden;
+  height: 4rem;
+  border-bottom: 0.125rem solid transparent;
 }
 .panel {
   display: flex;
@@ -21,26 +20,30 @@
 .logo {
   height: 100%;
 }
+.gray-icon {
+  filter: var(--gray-icon-filter);
+}
+.button-and-menu-wrapper {
+  display: flex
+}
 .menu-wrapper {
   position: absolute;
   width: 0;
   height: 100%;
-  transform: translateX(-1rem);
 }
 .menu {
+  @mixin glass-style;
   position: relative;
-  top: calc(4rem + 0.125rem + 0.25rem);
-  box-shadow: 0rem 0.25rem 0.5rem var(--ui-black-dim);
-  background: var(--looks-main-80);
-  border: 0.125rem solid var(--looks-main-60);
+  top: calc(3.5rem + 0.125rem + 0.25rem);
   border-radius: 0.5rem;
   width: max-content;
   max-height: calc(100vh - 10rem);
+  box-shadow: var(--ui-glass-shadow), var(--ui-black-dim) 0 0.25rem 0.5rem;
   overflow-y: overlay;
   transition: 0.25s;
 }
 .menu.menu-closed {
-  top: calc((4rem + 0.125rem + 0.25rem) / 2);
+  top: calc((3.5rem + 0.125rem + 0.25rem) / 2);
   visibility: hidden;
   opacity: 0;
 }
@@ -48,13 +51,19 @@
   display: flex;
   gap: 0.5rem;
   padding: 0.5rem;
+  cursor: pointer;
 }
 .menu-item:hover {
   background: var(--ui-black-transparent);
 }
 .button-menu-open {
-  box-shadow: inset var(--hover-bg-color, var(--looks-main-50)) 0 0 0.5rem 0.35rem;
-  border-bottom: 0.125rem solid var(--hover-border-color, var(--looks-main-40));
+  background: color-mix(
+    in srgb,
+    var(--ui-glass),
+    var(--hover-bg-color, var(--looks-main-50)) 40%
+  ) !important;
+  border-color: var(--hover-bg-color, var(--looks-main-50)) !important;
+  box-shadow: var(--hover-shadow) !important;
 }
 .checkmark {
   opacity: 0

@@ -1,0 +1,38 @@
+.light-mode {
+  --looks-main-40: var(--default-looks-main-40);
+  --looks-main-50: var(--default-looks-main-50);
+  --looks-main-70: var(--default-looks-main-70);
+  --looks-bg: rgb(240, 240, 240);
+  --ui-black-more-transparent: rgba(0, 0, 0, 0.125);
+  --ui-black-transparent: rgba(0, 0, 0, 0.2);
+  --ui-black-dim: rgba(0, 0, 0, 0.533);
+  --ui-glass: rgba(255, 255, 255, 0.533);
+  --ui-glass-dark: rgba(0, 0, 0, 0.65);
+  --ui-glass-shadow: inset var(--ui-black-more-transparent) 0 0 0.25rem 0.2rem;
+  --link-40: var(--default-link-40);
+  --link-50: var(--default-link-50);
+  --link-90: var(--default-link-90);
+  --text: hsl(225deg 15% 40%);
+  --white-icon-filter: none;
+  --gray-icon-filter: none;
+  color-scheme: light;
+}
+.dark-mode {
+  --looks-main-40: var(--default-looks-main-60);
+  --looks-main-50: var(--default-looks-main-50);
+  --looks-main-70: var(--default-looks-main-30);
+  --looks-bg: rgb(25, 25, 25);
+  --ui-black-more-transparent: rgba(255, 255, 255, 0.125);
+  --ui-black-transparent: rgba(255, 255, 255, 0.2);
+  --ui-black-dim: rgba(255, 255, 255, 0.425);
+  --ui-glass: rgba(0, 0, 0, 0.533);
+  --ui-glass-dark: rgba(255, 255, 255, 0.65);
+  --ui-glass-shadow: inset var(--ui-black-more-transparent) 0 0 0.25rem 0.2rem;
+  --link-40: var(--default-link-60);
+  --link-50: var(--default-link-50);
+  --link-90: var(--default-link-15);
+  --text: hsl(226, 100%, 95%);
+  --white-icon-filter: invert(1);
+  --gray-icon-filter: grayscale(100%) brightness(2.3);
+  color-scheme: dark;
+}

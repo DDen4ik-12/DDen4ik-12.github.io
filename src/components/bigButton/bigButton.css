@@ -1,10 +1,15 @@
+@import "../../utils/mixins.css";
+
 .main {
+  @mixin glass-style;
+  --hover-shadow:
+    var(--ui-glass-shadow),
+    inset var(--hover-bg-color, var(--looks-main-50)) 0 0 0.25rem 0.2rem,
+    var(--hover-bg-color, var(--looks-main-50)) 0 0 0.25rem 0.05rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  background: var(--ui-main-90);
-  border-bottom: 0.125rem solid var(--ui-main-70);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   width: 15rem;
@@ -20,8 +25,8 @@
   transition: 0.5s;
 }
 .main:hover {
-  box-shadow: inset var(--hover-bg-color, var(--looks-main-50)) 0 0 0.5rem 0.35rem;
-  border-bottom: 0.125rem solid var(--hover-border-color, var(--looks-main-40));
+  border-color: var(--hover-bg-color, var(--looks-main-50));
+  box-shadow: var(--hover-shadow);
 }
 .main:hover > .img {
   transform: rotateX(0deg) rotateZ(0deg) scale(1);

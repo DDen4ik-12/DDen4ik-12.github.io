@@ -3,14 +3,25 @@ import classNames from "../../utils/classNames.js";
 
 import * as styles from "./normalButton.css";
 
-function NormalButton({ className, bgColor, borderColor, href, children, ...props }) {
+function NormalButton({
+  linkClassName,
+  className,
+  bgColor,
+  glassStyle = "normal",
+  href,
+  download,
+  children,
+  ...props
+}) {
   const main = (
     <div
-      className={classNames(styles.main, className)}
+      className={classNames(styles.main, {
+        [styles.glassStyle]: glassStyle == "normal",
+        [styles.glassStyleDark]: glassStyle == "dark",
+      }, className)}
       role="button"
       style={{
-        "--hover-bg-color": bgColor,
-        "--hover-border-color": borderColor
+        "--hover-bg-color": bgColor
       }}
       {...props}
     >
@@ -18,7 +29,11 @@ function NormalButton({ className, bgColor, borderColor, href, children, ...prop
     </div>
   );
   return href == undefined ? main : (
-    <a href={href}>
+    <a
+      className={linkClassName}
+      href={href}
+      download={download}
+    >
       {main}
     </a>
   );
