@@ -7,15 +7,13 @@ import Button3dIcon from "../../components/button3dIcon/button3dIcon.jsx";
 
 import * as mainStyles from "../../main.css";
 import * as styles from "./404.css";
-import banner from "../index/banner.svg";
+import banner from "./banner.svg";
 import bulbIcon from "/assets/bulb.svg";
 
 function StartBlock(props) {
   return (
     <BgImg imgSrc={banner}>
-      <Localized
-        id="page-404_start-block_1"
-      >
+      <Localized id="page-404_start-block_1">
         <h1 className={mainStyles.font3Rem} />
       </Localized>
       <Localized

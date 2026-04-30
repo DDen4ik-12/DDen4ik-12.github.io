@@ -20,9 +20,7 @@ import gamepadIcon from "/assets/gamepad.svg";
 function StartBlock() {
   return (
     <BgImg imgSrc={banner} imgPosY="center">
-      <Localized
-        id="page-projects_start-block_1"
-      >
+      <Localized id="page-projects_start-block_1">
         <h1 className={mainStyles.font3Rem} />
       </Localized>
       <Localized

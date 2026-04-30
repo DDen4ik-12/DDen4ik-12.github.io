@@ -61,8 +61,8 @@ const skills = {
   py: ["Python", "#3776ab", require("!../../utils/recolorSvgLoader!./py.svg").default],
 };
 const futureSkills = {
-  cpp: ["C++", "#00599c", require("!../../utils/recolorSvgLoader!./cpp.svg").default],
-  godot: ["Godot Engine", "#478cbf", require("!../../utils/recolorSvgLoader!./godot.svg").default],
+  cpp: ["C++", "#00599c"],
+  godot: ["Godot Engine", "#478cbf", require("./godot.svg")],
 };
 
 function Content(props) {
@@ -105,13 +105,17 @@ function Content(props) {
             <h2 />
           </Localized>
           <div className={styles.skillsGrid}>
-            {Object.entries(skills).map(([key, [name, color, imgFn]]) => (
+            {Object.entries(skills).map(([key, [name, color, img]]) => (
               <div
                 key={key}
                 className={styles.skill}
                 style={{ "--color": color }}
               >
-                <img src={imgFn(color)} />
+                {img && (
+                  typeof img == "function"
+                    ? <img src={img(color)} />
+                    : <img src={img} />
+                )}
                 {name}
               </div>
             ))}
@@ -120,13 +124,17 @@ function Content(props) {
             <h2 />
           </Localized>
           <div className={styles.skillsGrid}>
-            {Object.entries(futureSkills).map(([key, [name, color, imgFn]]) => (
+            {Object.entries(futureSkills).map(([key, [name, color, img]]) => (
               <div
                 key={key}
                 className={styles.skill}
                 style={{ "--color": color }}
               >
-                <img src={imgFn(color)} />
+                {img && (
+                  typeof img == "function"
+                    ? <img src={img(color)} />
+                    : <img src={img} />
+                )}
                 {name}
               </div>
             ))}

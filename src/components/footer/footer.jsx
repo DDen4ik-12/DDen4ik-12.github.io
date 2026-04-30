@@ -2,9 +2,9 @@ import React from "react";
 import { Localized } from "@fluent/react";
 import classNames from "../../utils/classNames.js";
 
+import * as mainStyles from "/src/main.css";
 import * as styles from "./footer.css";
 import siteLogo from "/assets/siteLogo.svg";
-import scratchLogo from "./scratchLogo.svg";
 import githubLogo from "./githubLogo.svg";
 import telegramLogo from "./telegramLogo.svg";
 import dashLogo from "/assets/dashLogoMini.svg";
@@ -42,16 +42,6 @@ function Footer() {
       </div>
       <div>
         <Localized
-          id="footer_socials_scratch"
-          attrs={{ title: true }}
-        >
-          <FooterButton
-            imgSrc={scratchLogo}
-            href="https://scratch.mit.edu/users/Den4ik-12"
-            bgColor="#f8aa36"
-          />
-        </Localized>
-        <Localized
           id="footer_socials_github"
           attrs={{ title: true }}
         >
@@ -82,6 +72,20 @@ function Footer() {
             imgSrc={dashLogo}
             href="https://dashblocks.github.io/user#Den4ik-12"
             bgColor="#ff8f4d"
+          />
+        </Localized>
+      </div>
+      <div>
+        <Localized id="footer_source-code">
+          <a
+            className={mainStyles.link}
+            href="https://github.com/DDen4ik-12/DDen4ik-12.github.io"
+          />
+        </Localized>
+        <Localized id="footer_socials_scratch">
+          <a
+            className={mainStyles.link}
+            href="https://scratch.mit.edu/users/Den4ik-12"
           />
         </Localized>
       </div>

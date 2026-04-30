@@ -32,6 +32,7 @@ function L10nProviderHOC(Content) {
       if (saveLocale) {
         localStorage.setItem(savedLocaleKey, newLocales[0]);
       }
+      document.documentElement.lang = newLocales[0];
       setCurrentLocales(newLocales);
       setL10n(new ReactLocalization(generateBundles(newLocales)));
     };

@@ -1,0 +1,1 @@
+`den4ik12Bot.svg`: Den4ik-12's Bot (character) is My artwork and property of Me. Copyright (c) 2026 Den4ik-12
