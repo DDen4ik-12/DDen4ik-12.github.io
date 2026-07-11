@@ -10,6 +10,16 @@
   padding: 12rem 1rem;
   width: calc(100% - 2rem);
 }
+.main > * {
+  transition: 0.5s;
+}
+.main.clear-img-enabled > .img {
+  filter: none;
+}
+.main.clear-img-enabled > :not(.img, .toggle-clear-img-button) {
+  visibility: hidden;
+  opacity: 0;
+}
 .img {
   position: absolute;
   background-size: cover;
@@ -18,4 +28,9 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+.toggle-clear-img-button {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
 }

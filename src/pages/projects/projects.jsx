@@ -76,10 +76,8 @@ function Content(props) {
               <NormalButton
                 linkClassName={mainStyles.cardButtonLink}
                 className={mainStyles.cardButton}
-                glassStyle="dark"
                 href={project.link}
                 download={project.download}
-                bgColor={project.bgColor}
               />
             </Localized>
           </div>
@@ -105,10 +103,8 @@ function Content(props) {
               <NormalButton
                 linkClassName={mainStyles.cardButtonLink}
                 className={mainStyles.cardButton}
-                glassStyle="dark"
                 href={`https://scratch.mit.edu/projects/${project.id}`}
                 download={project.download}
-                bgColor={project.bgColor}
               />
             </Localized>
           </div>
@@ -134,13 +130,11 @@ function Content(props) {
               <NormalButton
                 linkClassName={mainStyles.cardButtonLink}
                 className={mainStyles.cardButton}
-                glassStyle="dark"
                 href={
                   "https://dashblocks.github.io/editor.html" +
                     `?extension=https://dashblocks.github.io/extensions/static/extensions/${project.extLink}`
                 }
                 download={project.download}
-                bgColor={project.bgColor}
               />
             </Localized>
           </div>
@@ -166,39 +160,13 @@ function Content(props) {
               <NormalButton
                 linkClassName={mainStyles.cardButtonLink}
                 className={mainStyles.cardButton}
-                glassStyle="dark"
                 href={project.link}
                 download={project.download}
-                bgColor={project.bgColor}
               />
             </Localized>
           </div>
         ))}
       </div>
-      {/*
-      <Localized id="page-projects_other-projects">
-        <h1 />
-      </Localized>
-      <div className={mainStyles.scrollableList}>
-        {otherProjects.map((project, i) => (
-          <BigButton
-            key={i}
-            imgSrc={project.img}
-            href={project.link}
-            download={project.download}
-            bgColor={project.bgColor}
-            borderColor={project.borderColor}
-          >
-            <Localized
-              id={project.descId}
-              attrs={{ name: true, desc: true }}
-            >
-              <ProjectDesc />
-            </Localized>
-          </BigButton>
-        ))}
-      </div>
-      */}
     </>
   );
 };

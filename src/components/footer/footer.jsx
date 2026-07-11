@@ -15,9 +15,6 @@ function FooterButton(props) {
       className={styles.buttonMain}
       role="button"
       title={props.title}
-      style={{
-        "--hover-bg-color": props.bgColor,
-      }}
     >
       <img
         className={classNames(styles.buttonImg, props.imgClassName)}

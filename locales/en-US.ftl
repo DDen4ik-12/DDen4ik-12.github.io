@@ -68,8 +68,8 @@ projects_maps =
 projects_sfv-fix =
   .name = {-scratch-name()} Follow Viewports Fix
   .desc = A userscript for the {-scratch-name()} website that returns the previous display of Scratchers in the "Followers" and "Following" sections on your profile page
-projects_some-gh-utils =
-  .name = Some {-github-name()} Utils
+projects_octatils =
+  .name = OctaTils
   .desc = A userscript for the {-github-name()} website that add some utils
 
 ## "index" page content

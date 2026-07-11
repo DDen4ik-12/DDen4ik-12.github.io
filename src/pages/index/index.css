@@ -43,14 +43,18 @@
   border: 0.125rem solid var(--ui-black-transparent);
   border-radius: 0.5rem;
   padding: 0.5rem;
-  height: calc(5rem - 1rem);
+  height: calc(3.5rem - 1rem);
 }
 .button-thumb > img {
   aspect-ratio: 5 / 3;
   width: 100%;
 }
 .github-stats-embed {
+  background: var(--ui-main-60);
+  border-radius: 0.5rem;
+  aspect-ratio: 5 / 2;
   width: 100%;
+  overflow: hidden;
 }
 .skills-grid {
   display: grid;

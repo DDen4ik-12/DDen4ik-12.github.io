@@ -20,8 +20,8 @@
 .logo {
   height: 100%;
 }
-.gray-icon {
-  filter: var(--gray-icon-filter);
+.white-icon {
+  filter: var(--white-icon-filter);
 }
 .button-and-menu-wrapper {
   display: flex
@@ -32,13 +32,13 @@
   height: 100%;
 }
 .menu {
-  @mixin glass-style;
+  @mixin box-style;
   position: relative;
   top: calc(3.5rem + 0.125rem + 0.25rem);
   border-radius: 0.5rem;
   width: max-content;
   max-height: calc(100vh - 10rem);
-  box-shadow: var(--ui-glass-shadow), var(--ui-black-dim) 0 0.25rem 0.5rem;
+  box-shadow: var(--ui-shadow), var(--ui-black-dim) 0 0.25rem 0.5rem;
   overflow-y: overlay;
   transition: 0.25s;
 }
@@ -57,13 +57,7 @@
   background: var(--ui-black-transparent);
 }
 .button-menu-open {
-  background: color-mix(
-    in srgb,
-    var(--ui-glass),
-    var(--hover-bg-color, var(--looks-main-50)) 40%
-  ) !important;
-  border-color: var(--hover-bg-color, var(--looks-main-50)) !important;
-  box-shadow: var(--hover-shadow) !important;
+  background: var(--ui-main-60);
 }
 .checkmark {
   opacity: 0

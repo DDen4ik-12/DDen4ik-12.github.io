@@ -42,14 +42,15 @@ const applyRandColMode = () => {
   const style = document.createElement("style");
   style.textContent =
     `:root {
+      --default-looks-main-15: hsl(${looksMainHue}deg ${looksMainSat}% 15%);
       --default-looks-main-30: hsl(${looksMainHue}deg ${looksMainSat}% 30%);
       --default-looks-main-40: hsl(${looksMainHue}deg ${looksMainSat}% 40%);
       --default-looks-main-50: hsl(${looksMainHue}deg ${looksMainSat}% 50%);
       --default-looks-main-60: hsl(${looksMainHue}deg ${looksMainSat}% 60%);
       --default-looks-main-70: hsl(${looksMainHue}deg ${looksMainSat}% 70%);
+      --default-looks-main-90: hsl(${looksMainHue}deg ${looksMainSat}% 90%);
       --default-link-15: hsl(${linkHue}deg 100% 15%);
       --default-link-40: hsl(${linkHue}deg 100% 40%);
-      --default-link-50: hsl(${linkHue}deg 100% 50%);
       --default-link-60: hsl(${linkHue}deg 100% 60%);
       --default-link-90: hsl(${linkHue}deg 100% 90%);
     }`;

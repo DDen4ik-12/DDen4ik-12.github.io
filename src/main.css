@@ -1,14 +1,32 @@
 @import "./utils/mixins.css";
 
 :root {
+  --default-looks-main-15: hsl(51deg 100% 15%);
   --default-looks-main-30: hsl(51deg 100% 30%);
   --default-looks-main-40: hsl(51deg 100% 40%);
   --default-looks-main-50: hsl(51deg 100% 50%);
   --default-looks-main-60: hsl(51deg 100% 60%);
   --default-looks-main-70: hsl(51deg 100% 70%);
+  --default-looks-main-90: hsl(51deg 100% 90%);
+
+  --default-ui-main-40: color-mix(
+    in srgb,
+    hsl(0deg 0% 40%),
+    var(--default-looks-main-40) 20%
+  );
+  --default-ui-main-50: color-mix(
+    in srgb,
+    hsl(0deg 0% 50%),
+    var(--default-looks-main-50) 20%
+  );
+  --default-ui-main-60: color-mix(
+    in srgb,
+    hsl(0deg 0% 60%),
+    var(--default-looks-main-60) 20%
+  );
+
   --default-link-15: hsl(30deg 100% 15%);
   --default-link-40: hsl(30deg 100% 40%);
-  --default-link-50: hsl(30deg 100% 50%);
   --default-link-60: hsl(30deg 100% 60%);
   --default-link-90: hsl(30deg 100% 90%);
 }
@@ -16,12 +34,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   color: var(--text);
   margin: 0;
-  background: linear-gradient(
-    to right,
-    var(--looks-main-90) 0%,
-    var(--looks-bg) 20% 80%,
-    var(--looks-main-90) 100%
-  );
+  background: var(--looks-main-90);
 }
 h1, h2, h3, h4, h5 {
   margin: 0;
@@ -37,16 +50,22 @@ img {
   font-size: 3rem;
 }
 .link {
-  background: var(--link-90);
-  color: var(--link-40);
-  border: 0.125rem dashed var(--link-40);
-  border-radius: 0.5rem;
-  padding-inline: 0.25rem;
+  color: var(--link-15);
+  box-shadow: inset var(--link-15) 0 -0.125rem;
   transition: 0.25s;
 }
 .link:hover {
-  background: var(--link-50);
-  color: white;
+  color: var(--link-40);
+  box-shadow: inset var(--link-40) 0 -0.2rem;
+}
+.dark-mode-link {
+  color: var(--default-link-90);
+  box-shadow: inset var(--default-link-90) 0 -0.125rem;
+  transition: 0.25s;
+}
+.dark-mode-link:hover {
+  color: var(--default-link-60);
+  box-shadow: inset var(--default-link-60) 0 -0.2rem;
 }
 .content {
   display: flex;
@@ -56,7 +75,7 @@ img {
   padding: 1rem 2.5rem;
 }
 .section {
-  @mixin glass-style;
+  @mixin box-style;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +85,7 @@ img {
   width: calc(100% - 2rem);
 }
 .card {
-  @mixin glass-style;
+  @mixin box-style;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,7 +123,7 @@ img {
   width: calc(100% - 2rem);
 }
 .scrollable-list {
-  @mixin glass-style;
+  @mixin box-style;
   display: flex;
   align-items: stretch;
   gap: 0.5rem;

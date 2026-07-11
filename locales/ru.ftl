@@ -76,8 +76,8 @@ projects_maps =
 projects_sfv-fix =
   .name = {-scratch-name()} Follow Viewports Fix
   .desc = Юзерскрипт для вебсайта {-scratch-name()}, возвращающий прежнее отображение Скретчеров в разделах "Мои подписчики" и "Подписан(а) на" на странице вашего профиля
-projects_some-gh-utils =
-  .name = Some {-github-name()} Utils
+projects_octatils =
+  .name = OctaTils
   .desc = Юзерскрипт для вебсайта {-github-name()}, добавляющий несколько утилит
 
 ## "index" page content

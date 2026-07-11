@@ -79,8 +79,8 @@ const userscripts = [
     img: scriptIcon,
   },
   {
-    descId: "projects_some-gh-utils",
-    link: "https://github.com/DDen4ik-12/data-files#some-github-utils",
+    descId: "projects_octatils",
+    link: "https://github.com/DDen4ik-12/data-files#octatils",
     buttonId: "button_learn-more",
     img: scriptIcon,
   },

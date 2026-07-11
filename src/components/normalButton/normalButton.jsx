@@ -6,8 +6,6 @@ import * as styles from "./normalButton.css";
 function NormalButton({
   linkClassName,
   className,
-  bgColor,
-  glassStyle = "normal",
   href,
   download,
   children,
@@ -15,14 +13,8 @@ function NormalButton({
 }) {
   const main = (
     <div
-      className={classNames(styles.main, {
-        [styles.glassStyle]: glassStyle == "normal",
-        [styles.glassStyleDark]: glassStyle == "dark",
-      }, className)}
+      className={classNames(styles.main, className)}
       role="button"
-      style={{
-        "--hover-bg-color": bgColor
-      }}
       {...props}
     >
       {children}

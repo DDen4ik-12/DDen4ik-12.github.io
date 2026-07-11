@@ -11,7 +11,7 @@
 }
 
 .footer {
-  @mixin glass-style-footer;
+  @mixin box-style;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,18 +31,15 @@
   height: 2rem;
 }
 .button-main {
-  @mixin glass-style-dark;
-  --hover-shadow:
-    var(--ui-glass-shadow),
-    inset var(--hover-bg-color, var(--looks-main-50)) 0 0 0.25rem 0.2rem,
-    var(--hover-bg-color, var(--looks-main-50)) 0 0 0.25rem 0.05rem;
   display: flex;
   align-items: center;
+  background: var(--ui-main-40);
+  border-bottom: 0.125rem solid var(--ui-black-dim);
   border-radius: 0.5rem;
   padding: 0.65rem 1rem;
   width: fit-content;
+  box-shadow: var(--ui-shadow);
   transition: 0.5s;
-  overflow: hidden;
   cursor: pointer;
 }
 .button-img {
@@ -53,14 +50,11 @@
   filter: var(--white-icon-filter);
 }
 .button-main:hover {
-  background: color-mix(
-    in srgb,
-    var(--ui-glass-dark),
-    var(--hover-bg-color, var(--looks-main-50)) 40%
-  );
-  border-color: var(--hover-bg-color, var(--looks-main-50));
-  box-shadow: var(--hover-shadow);
+  background: var(--ui-main-60);
 }
 .button-main:hover > .button-img {
   animation: 0.5s button_anim cubic-bezier(0.07, 0.96, 0.37, 2.07);
+}
+.button-main:active {
+  box-shadow: var(--ui-intense-shadow);
 }

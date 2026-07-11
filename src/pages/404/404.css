@@ -1,7 +1,9 @@
 :root {
+  --default-looks-main-15: hsl(340deg 100% 15%);
   --default-looks-main-30: hsl(340deg 100% 30%);
   --default-looks-main-40: hsl(340deg 100% 45%);
   --default-looks-main-50: hsl(340deg 100% 60%);
   --default-looks-main-60: hsl(340deg 100% 70%);
   --default-looks-main-70: hsl(340deg 100% 80%);
+  --default-looks-main-90: hsl(340deg 100% 95%);
 }

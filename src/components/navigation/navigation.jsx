@@ -42,9 +42,8 @@ function Navigation(props) {
               [styles.buttonMenuOpen]: langMenuOpen
             })}
             onClick={() => setLangMenuOpen(!langMenuOpen)}
-            bgColor="var(--looks-main-40)"
           >
-            <img className={styles.grayIcon} src={langIcon} />
+            <img className={styles.whiteIcon} src={langIcon} />
             {"▾" /* TODO: Make asset for arrow */}
           </NormalButton>
           <Menu opened={langMenuOpen}>
@@ -71,7 +70,6 @@ function Navigation(props) {
         </div>
         <NormalButton
           onClick={() => setDarkMode(!darkMode)}
-          bgColor="var(--looks-main-40)"
         >
           {darkMode ? "☀" : "🌙"}
         </NormalButton>

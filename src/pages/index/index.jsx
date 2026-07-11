@@ -76,7 +76,6 @@ function Content(props) {
           {mainProjects.map((project, i) => (
             <NormalButton
               key={i}
-              glassStyle="dark"
               href={project.link}
               download={project.download}
               bgColor={project.bgColor}

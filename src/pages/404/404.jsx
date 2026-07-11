@@ -25,7 +25,7 @@ function StartBlock(props) {
       <Localized
         id="page-404_start-block_3"
         elems={{
-          indexPageLink: <a className={mainStyles.link} href={props.websiteLink("/")} />,
+          indexPageLink: <a className={mainStyles.darkModeLink} href={props.websiteLink("/")} />,
         }}
       >
         <h3 />
