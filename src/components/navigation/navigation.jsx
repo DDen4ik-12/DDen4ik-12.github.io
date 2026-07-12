@@ -8,6 +8,8 @@ import classNames from "../../utils/classNames.js";
 import * as styles from "./navigation.css";
 import siteLogo from "/assets/siteLogo.svg";
 import langIcon from "./lang.svg";
+import darkModeIcon from "./darkMode.svg";
+import lightModeIcon from "./lightMode.svg";
 
 function Menu(props) {
   return (
@@ -71,7 +73,10 @@ function Navigation(props) {
         <NormalButton
           onClick={() => setDarkMode(!darkMode)}
         >
-          {darkMode ? "☀" : "🌙"}
+          <img
+            className={styles.whiteIcon}
+            src={darkMode ? lightModeIcon : darkModeIcon}
+          />
         </NormalButton>
       </div>
     </div>

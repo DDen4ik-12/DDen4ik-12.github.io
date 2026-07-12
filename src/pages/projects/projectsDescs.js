@@ -1,9 +1,11 @@
 import scriptIcon from "/assets/script.svg";
 import dashLogo from "/assets/dashLogoMini.svg";
+import stageScIcon from "/assets/stageScIcon.svg";
 import den4ik12BotIcon from "/assets/den4ik12Bot.svg";
 import wheelScrollIcon from "/assets/dashExtensionsIcons/wheelScroll.svg";
 import pathfindingIcon from "/assets/dashExtensionsIcons/pathfinding.svg";
 import mapsIcon from "/assets/dashExtensionsIcons/maps.svg";
+import octatilsIcon from "/assets/octatilsIcon.svg";
 
 const mainProjects = [
   {
@@ -17,7 +19,7 @@ const mainProjects = [
     descId: "projects_stage-sc",
     link: "https://github.com/DDen4ik-12/Stage-Size-Changer#readme",
     buttonId: "button_learn-more",
-    img: scriptIcon,
+    img: stageScIcon,
     bgColor: "#8c9abf",
   },
   {
@@ -82,7 +84,8 @@ const userscripts = [
     descId: "projects_octatils",
     link: "https://github.com/DDen4ik-12/data-files#octatils",
     buttonId: "button_learn-more",
-    img: scriptIcon,
+    img: octatilsIcon,
+    bgColor: "#c8c200",
   },
 ];
 const otherProjects = [];
