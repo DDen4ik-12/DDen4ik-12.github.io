@@ -60,7 +60,7 @@ function Navigation(props) {
               >
                 <div
                   className={classNames(styles.checkmark, {
-                    [styles.checkmarkChoosen]: code == currentLocales[0]
+                    [styles.checkmarkChoosen]: code === currentLocales[0]
                   })}
                 >
                   {"✔" /* TODO: Make asset for checkmark */}

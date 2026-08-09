@@ -3,6 +3,8 @@ import { FluentBundle, FluentResource } from "@fluent/bundle";
 import { negotiateLanguages } from "@fluent/langneg";
 import { LocalizationProvider, ReactLocalization } from "@fluent/react";
 
+import * as mainStyles from "../main.css";
+
 const savedLocaleKey = "lang";
 const defaultLocale = "en-US";
 const allLocales = {
@@ -45,7 +47,11 @@ function L10nProviderHOC(Content) {
       false
     ), []);
 
-    if (l10n == null) return <div>Loading...</div>;
+    if (l10n === null) return (
+      <div className={mainStyles.loadingSplash}>
+        <h3>Initializing localization...</h3>
+      </div>
+    );
     return (
       <LocalizationProvider l10n={l10n}>
         <L10nProviderCtx value={{ changeLocales, currentLocales }}>

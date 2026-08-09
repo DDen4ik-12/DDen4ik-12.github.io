@@ -2,6 +2,3 @@
 npm-*
 /dist
 /.vscode
-
-# Old directories
-/dash-old

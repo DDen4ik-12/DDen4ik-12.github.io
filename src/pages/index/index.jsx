@@ -54,11 +54,13 @@ const githubStatsEmbedUrl =
   "https://v0-git-hub-streak-score-card-phi.vercel.app/api/card-with-avatar" +
     "?username=DDen4ik-12&theme=%7B%22backgroundColor%22%3A%22%230f172a%22%2C%22textColor%22%3A%22%23e2e8f0%22%2C%22accentColor%22%3A%22%230ea5e9%22%2C%22borderColor%22%3A%22%231e293b%22%2C%22waterColor%22%3A%22%230ea5e9%22%2C%22streakColor%22%3A%22%2306b6d4%22%7D";
 const skills = {
+  js: ["JavaScript", "#c4b017", require("!../../utils/recolorSvgLoader!./js.svg").default],
+  nodejs: ["Node.js", "#5fa04e"],
   html: ["HTML", "#e34f26", require("!../../utils/recolorSvgLoader!./html.svg").default],
   css: ["CSS", "#663399", require("!../../utils/recolorSvgLoader!./css.svg").default],
-  js: ["JavaScript", "#c4b017", require("!../../utils/recolorSvgLoader!./js.svg").default],
   react: ["React", "#61dafb", require("!../../utils/recolorSvgLoader!./react.svg").default],
   py: ["Python", "#3776ab", require("!../../utils/recolorSvgLoader!./py.svg").default],
+  md: ["Markdown", "#888888", require("!../../utils/recolorSvgLoader!./md.svg").default],
 };
 const futureSkills = {
   cpp: ["C++", "#00599c"],
@@ -78,7 +80,6 @@ function Content(props) {
               key={i}
               href={project.link}
               download={project.download}
-              bgColor={project.bgColor}
             >
               <ProjectThumb
                 color={project.bgColor}
@@ -111,7 +112,7 @@ function Content(props) {
                 style={{ "--color": color }}
               >
                 {img && (
-                  typeof img == "function"
+                  typeof img === "function"
                     ? <img src={img(color)} />
                     : <img src={img} />
                 )}
@@ -130,7 +131,7 @@ function Content(props) {
                 style={{ "--color": color }}
               >
                 {img && (
-                  typeof img == "function"
+                  typeof img === "function"
                     ? <img src={img(color)} />
                     : <img src={img} />
                 )}

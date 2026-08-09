@@ -12,6 +12,8 @@ This banner is under [CC BY 4.0 license](https://creativecommons.org/licences/by
 
 `js.svg`: JavaScript monochrome logo is based on the JSConf design which is under [MIT license](https://github.com/voodootikigod/logo.js/blob/master/LICENSE)
 
+`md.svg`: The Markdown Mark is under [CC0 1.0 license](https://github.com/dcurtis/markdown-mark/blob/master/LICENSE)
+
 `py.svg`: Python monochrome logo is based on the Python logo which is under [GNU GPLv2 license](https://www.gnu.org/licences/gpl-2.0)
 
 `react.svg`: React monochrome logo is based on the React logo by "Meta Platforms, Inc" which is under [CC BY-SA 1.0 license](https://creativecommons.org/licences/by-sa/1.0)

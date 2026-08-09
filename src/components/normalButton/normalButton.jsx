@@ -20,7 +20,7 @@ function NormalButton({
       {children}
     </div>
   );
-  return href == undefined ? main : (
+  return href === undefined ? main : (
     <a
       className={linkClassName}
       href={href}

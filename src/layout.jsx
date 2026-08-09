@@ -62,7 +62,7 @@ const applyRandColMode = () => {
 
 export default (placeholder, StartBlock, Content, pageNameId) => {
   const randColMode =
-    ((new URL(location.href)).searchParams.get("randCol") ?? undefined) != undefined;
+    ((new URL(location.href)).searchParams.get("randCol") ?? undefined) !== undefined;
   const websiteLink = (ogLink) => {
     const url = ogLink.startsWith("/")
       ? new URL(`${location.origin}${ogLink}`)

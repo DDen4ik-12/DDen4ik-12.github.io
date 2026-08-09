@@ -22,7 +22,7 @@ function FooterButton(props) {
       />
     </div>
   );
-  return props.href == undefined ? main : (
+  return props.href === undefined ? main : (
     <a href={props.href}>
       {main}
     </a>
@@ -46,7 +46,6 @@ function Footer() {
             imgClassName={styles.iconWhite}
             imgSrc={githubLogo}
             href="https://github.com/DDen4ik-12"
-            bgColor="#b3b3b3"
           />
         </Localized>
         <Localized
@@ -57,7 +56,6 @@ function Footer() {
             imgClassName={styles.iconWhite}
             imgSrc={telegramLogo}
             href="https://t.me/d_den4ik_12_base"
-            bgColor="#26a5e4"
           />
         </Localized>
         <Localized
@@ -68,7 +66,6 @@ function Footer() {
             imgClassName={styles.iconWhite}
             imgSrc={dashLogo}
             href="https://dashblocks.github.io/user#Den4ik-12"
-            bgColor="#ff8f4d"
           />
         </Localized>
       </div>

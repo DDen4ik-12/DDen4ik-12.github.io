@@ -14,7 +14,7 @@ function Button3dIcon({ className, text, imgSrc, href, ...props }) {
       <img className={styles.img} src={imgSrc} />
     </div>
   );
-  return href == undefined ? main : (
+  return href === undefined ? main : (
     <a href={href}>
       {main}
     </a>

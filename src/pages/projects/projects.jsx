@@ -3,10 +3,9 @@ import { Localized } from "@fluent/react";
 import useLayout from "../../layout.jsx";
 import {
   mainProjects,
-  scratchProjects,
-  dashExtensions,
   userscripts,
-  otherProjects,
+  dashExtensions,
+  scratchProjects,
 } from "./projectsDescs.js";
 import CircAnimPlaceholder from "../../components/circAnimPlaceholder/circAnimPlaceholder.jsx";
 import BgImg from "../../components/bgImg/bgImg.jsx";
@@ -83,15 +82,15 @@ function Content(props) {
           </div>
         ))}
       </div>
-      <Localized id="page-projects_scratch-projects">
+      <Localized id="page-projects_userscripts">
         <h1 />
       </Localized>
       <div className={mainStyles.scrollableList}>
-        {scratchProjects.map((project, i) => (
+        {userscripts.map((project, i) => (
           <div key={i} className={mainStyles.card}>
             <ProjectThumb
               color={project.bgColor}
-              imgSrc={gamepadIcon}
+              imgSrc={project.img}
             />
             <Localized
               id={project.descId}
@@ -99,11 +98,11 @@ function Content(props) {
             >
               <ProjectDesc />
             </Localized>
-            <Localized id="button_play">
+            <Localized id={project.buttonId}>
               <NormalButton
                 linkClassName={mainStyles.cardButtonLink}
                 className={mainStyles.cardButton}
-                href={`https://scratch.mit.edu/projects/${project.id}`}
+                href={project.link}
                 download={project.download}
               />
             </Localized>
@@ -140,15 +139,15 @@ function Content(props) {
           </div>
         ))}
       </div>
-      <Localized id="page-projects_userscripts">
+      <Localized id="page-projects_scratch-projects">
         <h1 />
       </Localized>
       <div className={mainStyles.scrollableList}>
-        {userscripts.map((project, i) => (
+        {scratchProjects.map((project, i) => (
           <div key={i} className={mainStyles.card}>
             <ProjectThumb
               color={project.bgColor}
-              imgSrc={project.img}
+              imgSrc={gamepadIcon}
             />
             <Localized
               id={project.descId}
@@ -156,11 +155,11 @@ function Content(props) {
             >
               <ProjectDesc />
             </Localized>
-            <Localized id={project.buttonId}>
+            <Localized id="button_play">
               <NormalButton
                 linkClassName={mainStyles.cardButtonLink}
                 className={mainStyles.cardButton}
-                href={project.link}
+                href={`https://scratch.mit.edu/projects/${project.id}`}
                 download={project.download}
               />
             </Localized>
