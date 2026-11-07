@@ -1,67 +1,67 @@
 @import "../../utils/mixins.css";
 
 .nav {
-  z-index: 10000;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 4rem;
-  border-bottom: 0.125rem solid transparent;
+    z-index: 10000;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    border-bottom: 0.125rem solid transparent;
 }
 .panel {
-  display: flex;
-  gap: 0.5rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: calc(4rem - 1rem);
-  padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: calc(4rem - 1rem);
+    padding: 0.5rem;
 }
 .logo {
-  height: 100%;
+    height: 100%;
 }
 .white-icon {
-  filter: var(--white-icon-filter);
+    filter: var(--white-icon-filter);
 }
 .button-and-menu-wrapper {
-  display: flex
+    display: flex
 }
 .menu-wrapper {
-  position: absolute;
-  width: 0;
-  height: 100%;
+    position: absolute;
+    width: 0;
+    height: 100%;
 }
 .menu {
-  @mixin box-style;
-  position: relative;
-  top: calc(3.5rem + 0.125rem + 0.25rem);
-  border-radius: 0.5rem;
-  width: max-content;
-  max-height: calc(100vh - 10rem);
-  box-shadow: var(--ui-shadow), var(--ui-black-dim) 0 0.25rem 0.5rem;
-  overflow-y: overlay;
-  transition: 0.25s;
+    @mixin box-style;
+    position: relative;
+    top: calc(3.5rem + 0.125rem + 0.25rem);
+    border-radius: 0.5rem;
+    width: max-content;
+    max-height: calc(100vh - 10rem);
+    box-shadow: var(--ui-shadow), var(--ui-black-dim) 0 0.25rem 0.5rem;
+    overflow-y: overlay;
+    transition: 0.25s;
 }
 .menu.menu-closed {
-  top: calc((3.5rem + 0.125rem + 0.25rem) / 2);
-  visibility: hidden;
-  opacity: 0;
+    top: calc((3.5rem + 0.125rem + 0.25rem) / 2);
+    visibility: hidden;
+    opacity: 0;
 }
 .menu-item {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
 }
 .menu-item:hover {
-  background: var(--ui-black-transparent);
+    background: var(--ui-black-transparent);
 }
 .button-menu-open {
-  background: var(--ui-main-60);
+    background: var(--ui-main-60);
 }
 .checkmark {
-  opacity: 0
+    opacity: 0
 }
 .checkmark.checkmark-choosen {
-  opacity: 1;
+    opacity: 1;
 }

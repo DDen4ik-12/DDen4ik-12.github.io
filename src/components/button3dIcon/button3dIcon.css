@@ -1,33 +1,33 @@
 @import "../../utils/mixins.css";
 
 .main {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: var(--ui-main-40);
-  color: var(--looks-bg);
-  border-bottom: 0.125rem solid var(--ui-black-dim);
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  width: fit-content;
-  box-shadow: var(--ui-shadow);
-  transition: 0.5s;
-  overflow: hidden;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--ui-main-40);
+    color: var(--looks-bg);
+    border-bottom: 0.125rem solid var(--ui-black-dim);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    box-shadow: var(--ui-shadow);
+    transition: 0.5s;
+    overflow: hidden;
+    cursor: pointer;
 }
 .img {
-  transform: rotateX(30deg) rotateZ(-15deg) translateY(1.25rem) scale(1.25);
-  filter: drop-shadow(0.125rem 0.5rem 0.25rem var(--ui-black-dim));
-  width: 2.5rem;
-  height: 2.5rem;
-  transition: 0.5s;
+    transform: rotateX(30deg) rotateZ(-15deg) translateY(1.25rem) scale(1.25);
+    filter: drop-shadow(0.125rem 0.5rem 0.25rem var(--ui-black-dim));
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: 0.5s;
 }
 .main:hover {
-  background: var(--ui-main-60);
+    background: var(--ui-main-60);
 }
 .main:hover > .img {
-  transform: rotateX(0deg) rotateZ(0deg) translateY(0) scale(1.25);
+    transform: rotateX(0deg) rotateZ(0deg) translateY(0) scale(1.25);
 }
 .main:active {
-  box-shadow: var(--ui-intense-shadow);
+    box-shadow: var(--ui-intense-shadow);
 }

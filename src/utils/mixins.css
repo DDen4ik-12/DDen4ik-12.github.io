@@ -1,11 +1,11 @@
 @define-mixin box-style {
-  background: var(--looks-bg);
-  border: 0.125rem solid var(--ui-black-transparent);
-  box-shadow: var(--ui-shadow);
+    background: var(--looks-bg);
+    border: 0.125rem solid var(--ui-black-transparent);
+    box-shadow: var(--ui-shadow);
 }
 
 @define-mixin glass-style-nav {
-  background: var(--looks-bg);
-  border-bottom: 0.125rem solid var(--ui-black-transparent);
-  box-shadow: var(--ui-shadow);
+    background: var(--looks-bg);
+    border-bottom: 0.125rem solid var(--ui-black-transparent);
+    box-shadow: var(--ui-shadow);
 }

@@ -1,160 +1,160 @@
 @import "./utils/mixins.css";
 
 :root {
-  --default-looks-main-15: hsl(51deg 100% 15%);
-  --default-looks-main-30: hsl(51deg 100% 30%);
-  --default-looks-main-40: hsl(51deg 100% 40%);
-  --default-looks-main-50: hsl(51deg 100% 50%);
-  --default-looks-main-60: hsl(51deg 100% 60%);
-  --default-looks-main-70: hsl(51deg 100% 70%);
-  --default-looks-main-90: hsl(51deg 100% 90%);
+    --default-looks-main-15: hsl(51deg 100% 15%);
+    --default-looks-main-30: hsl(51deg 100% 30%);
+    --default-looks-main-40: hsl(51deg 100% 40%);
+    --default-looks-main-50: hsl(51deg 100% 50%);
+    --default-looks-main-60: hsl(51deg 100% 60%);
+    --default-looks-main-70: hsl(51deg 100% 70%);
+    --default-looks-main-90: hsl(51deg 100% 90%);
 
-  --default-ui-main-40: color-mix(
-    in srgb,
-    hsl(0deg 0% 40%),
-    var(--default-looks-main-40) 20%
-  );
-  --default-ui-main-50: color-mix(
-    in srgb,
-    hsl(0deg 0% 50%),
-    var(--default-looks-main-50) 20%
-  );
-  --default-ui-main-60: color-mix(
-    in srgb,
-    hsl(0deg 0% 60%),
-    var(--default-looks-main-60) 20%
-  );
+    --default-ui-main-40: color-mix(
+        in srgb,
+        hsl(0deg 0% 40%),
+        var(--default-looks-main-40) 20%
+    );
+    --default-ui-main-50: color-mix(
+        in srgb,
+        hsl(0deg 0% 50%),
+        var(--default-looks-main-50) 20%
+    );
+    --default-ui-main-60: color-mix(
+        in srgb,
+        hsl(0deg 0% 60%),
+        var(--default-looks-main-60) 20%
+    );
 
-  --default-link-15: hsl(30deg 100% 15%);
-  --default-link-40: hsl(30deg 100% 40%);
-  --default-link-60: hsl(30deg 100% 60%);
-  --default-link-90: hsl(30deg 100% 90%);
+    --default-link-15: hsl(30deg 100% 15%);
+    --default-link-40: hsl(30deg 100% 40%);
+    --default-link-60: hsl(30deg 100% 60%);
+    --default-link-90: hsl(30deg 100% 90%);
 }
 body {
-  font-family: "Noto Sans", sans-serif;
-  color: var(--text);
-  margin: 0;
-  background: var(--looks-main-90);
+    font-family: "Noto Sans", sans-serif;
+    color: var(--text);
+    margin: 0;
+    background: var(--looks-main-90);
 }
 h1, h2, h3, h4, h5 {
-  margin: 0;
+    margin: 0;
 }
 a {
-  color: var(--text);
-  text-decoration: none;
+    color: var(--text);
+    text-decoration: none;
 }
 img {
-  user-select: none;
+    user-select: none;
 }
 .font-3rem {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 .link {
-  color: var(--link-15);
-  box-shadow: inset var(--link-15) 0 -0.125rem;
-  transition: 0.25s;
+    color: var(--link-15);
+    box-shadow: inset var(--link-15) 0 -0.125rem;
+    transition: 0.25s;
 }
 .link:hover {
-  color: var(--link-40);
-  box-shadow: inset var(--link-40) 0 -0.2rem;
+    color: var(--link-40);
+    box-shadow: inset var(--link-40) 0 -0.2rem;
 }
 .dark-mode-link {
-  color: var(--default-link-90);
-  box-shadow: inset var(--default-link-90) 0 -0.125rem;
-  transition: 0.25s;
+    color: var(--default-link-90);
+    box-shadow: inset var(--default-link-90) 0 -0.125rem;
+    transition: 0.25s;
 }
 .dark-mode-link:hover {
-  color: var(--default-link-60);
-  box-shadow: inset var(--default-link-60) 0 -0.2rem;
+    color: var(--default-link-60);
+    box-shadow: inset var(--default-link-60) 0 -0.2rem;
 }
 .loading-splash {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
 }
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
 }
 .section {
-  @mixin box-style;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  width: calc(100% - 2rem);
+    @mixin box-style;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: calc(100% - 2rem);
 }
 .card {
-  @mixin box-style;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  width: calc(17rem - 2rem);
-  min-width: calc(17rem - 2rem);
+    @mixin box-style;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: calc(17rem - 2rem);
+    min-width: calc(17rem - 2rem);
 }
 .card-thumb {
-  aspect-ratio: 5 / 3;
-  background: linear-gradient(
-    45deg,
-    var(--color, var(--looks-main-50)) 0%,
-    color-mix(
-      in srgb,
-      var(--color, var(--looks-main-50)),
-      var(--looks-bg) 30%
-    ) 100%
-  );
-  border: 0.125rem solid var(--ui-black-transparent);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  width: calc(100% - 1rem);
+    aspect-ratio: 5 / 3;
+    background: linear-gradient(
+        45deg,
+        var(--color, var(--looks-main-50)) 0%,
+        color-mix(
+            in srgb,
+            var(--color, var(--looks-main-50)),
+            var(--looks-bg) 30%
+        ) 100%
+    );
+    border: 0.125rem solid var(--ui-black-transparent);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
 }
 .card-thumb > img {
-  aspect-ratio: 5 / 3;
-  width: 100%;
+    aspect-ratio: 5 / 3;
+    width: 100%;
 }
 .card-button-link {
-  width: 100%;
+    width: 100%;
 }
 .card-button {
-  justify-content: center;
-  width: calc(100% - 2rem);
+    justify-content: center;
+    width: calc(100% - 2rem) !important;
 }
 .scrollable-list {
-  @mixin box-style;
-  display: flex;
-  align-items: stretch;
-  gap: 0.5rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  width: calc(100% - 1rem);
-  overflow-x: auto;
+    @mixin box-style;
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+    overflow-x: auto;
 }
 .input-main {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: var(--ui-main-90);
-  border: none;
-  border-top: 0.125rem solid var(--ui-main-60);
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-family: "Noto Sans", sans-serif;
-  color: var(--text);
-  outline: none;
-  transition: 0.5s;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--ui-main-90);
+    border: none;
+    border-top: 0.125rem solid var(--ui-main-60);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: "Noto Sans", sans-serif;
+    color: var(--text);
+    outline: none;
+    transition: 0.5s;
 }
 .input-main:hover, .input-main:active, .input-main:focus {
-  box-shadow: inset var(--ui-main-80) 0 0 0.5rem 0.35rem;
-  border-top: 0.125rem solid var(--ui-main-40);
+    box-shadow: inset var(--ui-main-80) 0 0 0.5rem 0.35rem;
+    border-top: 0.125rem solid var(--ui-main-40);
 }

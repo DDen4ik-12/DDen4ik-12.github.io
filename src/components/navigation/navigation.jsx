@@ -12,75 +12,75 @@ import darkModeIcon from "./darkMode.svg";
 import lightModeIcon from "./lightMode.svg";
 
 function Menu(props) {
-  return (
-    <div className={styles.menuWrapper}>
-      <div className={classNames(styles.menu, { [styles.menuClosed]: !props.opened })}>
-        {props.children}
-      </div>
-    </div>
-  );
+    return (
+        <div className={styles.menuWrapper}>
+            <div className={classNames(styles.menu, { [styles.menuClosed]: !props.opened })}>
+                {props.children}
+            </div>
+        </div>
+    );
 };
 
 function Navigation(props) {
-  const { darkMode, setDarkMode } = useContext(ThemeProviderCtx);
-  const { changeLocales, currentLocales } = useContext(L10nProviderCtx);
-  let [langMenuOpen, setLangMenuOpen] = useState(false);
+    const { darkMode, setDarkMode } = useContext(ThemeProviderCtx);
+    const { changeLocales, currentLocales } = useContext(L10nProviderCtx);
+    let [langMenuOpen, setLangMenuOpen] = useState(false);
 
-  return (
-    <div className={styles.nav}>
-      {props.children}
-      <div className={styles.panel}>
-        <Localized
-          id="navigation_logo-title"
-          attrs={{ title: true }}
-        >
-          <a href={props.websiteLink("/")}>
-            <img className={styles.logo} src={siteLogo} />
-          </a>
-        </Localized>
-        <div className={styles.buttonAndMenuWrapper}>
-          <NormalButton
-            className={classNames({
-              [styles.buttonMenuOpen]: langMenuOpen
-            })}
-            onClick={() => setLangMenuOpen(!langMenuOpen)}
-          >
-            <img className={styles.whiteIcon} src={langIcon} />
-            {"▾" /* TODO: Make asset for arrow */}
-          </NormalButton>
-          <Menu opened={langMenuOpen}>
-            {Object.entries(allLocales).map(([code, [name]]) => (
-              <div
-                key={code}
-                className={styles.menuItem}
-                onClick={() => {
-                  changeLocales([code], true);
-                  setLangMenuOpen(false);
-                }}
-              >
-                <div
-                  className={classNames(styles.checkmark, {
-                    [styles.checkmarkChoosen]: code === currentLocales[0]
-                  })}
+    return (
+        <div className={styles.nav}>
+            {props.children}
+            <div className={styles.panel}>
+                <Localized
+                    id="navigation_logo-title"
+                    attrs={{ title: true }}
                 >
-                  {"✔" /* TODO: Make asset for checkmark */}
+                    <a href={props.websiteLink("/")}>
+                        <img className={styles.logo} src={siteLogo} />
+                    </a>
+                </Localized>
+                <div className={styles.buttonAndMenuWrapper}>
+                    <NormalButton
+                        className={classNames({
+                            [styles.buttonMenuOpen]: langMenuOpen
+                        })}
+                        onClick={() => setLangMenuOpen(!langMenuOpen)}
+                    >
+                        <img className={styles.whiteIcon} src={langIcon} />
+                        {"▾" /* TODO: Make asset for arrow */}
+                    </NormalButton>
+                    <Menu opened={langMenuOpen}>
+                        {Object.entries(allLocales).map(([code, [name]]) => (
+                            <div
+                                key={code}
+                                className={styles.menuItem}
+                                onClick={() => {
+                                    changeLocales([code], true);
+                                    setLangMenuOpen(false);
+                                }}
+                            >
+                                <div
+                                    className={classNames(styles.checkmark, {
+                                        [styles.checkmarkChoosen]: code === currentLocales[0]
+                                    })}
+                                >
+                                    {"✔" /* TODO: Make asset for checkmark */}
+                                </div>
+                                {name}
+                            </div>
+                        ))}
+                    </Menu>
                 </div>
-                {name}
-              </div>
-            ))}
-          </Menu>
+                <NormalButton
+                    onClick={() => setDarkMode(!darkMode)}
+                >
+                    <img
+                        className={styles.whiteIcon}
+                        src={darkMode ? lightModeIcon : darkModeIcon}
+                    />
+                </NormalButton>
+            </div>
         </div>
-        <NormalButton
-          onClick={() => setDarkMode(!darkMode)}
-        >
-          <img
-            className={styles.whiteIcon}
-            src={darkMode ? lightModeIcon : darkModeIcon}
-          />
-        </NormalButton>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Navigation;

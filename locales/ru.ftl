@@ -1,15 +1,15 @@
 ## My nickname
 
 -d12-name-extend =
-  {$locale ->
-   *[current] Денчик{$add1}-12{$add2}
-    [original] Den4ik{$add1}-12{$add2}
-  }
+    {$locale ->
+       *[current] Денчик{$add1}-12{$add2}
+        [original] Den4ik{$add1}-12{$add2}
+    }
 -d12-name =
-  {$locale ->
-   *[current] {-d12-name-extend(add1: "", add2: "")}
-    [original] {-d12-name-extend(locale: "original", add1: "", add2: "")}
-  }
+    {$locale ->
+       *[current] {-d12-name-extend(add1: "", add2: "")}
+        [original] {-d12-name-extend(locale: "original", add1: "", add2: "")}
+    }
 -d12-assign-name = {-d12-name-extend(add1: "а", add2: "")}
 
 ## Website name & title
@@ -22,10 +22,10 @@ website-title = {website-name} | {$pageName}
 -scratch-name = Scratch
 -github-name = GitHub
 -dash-name =
-  {$form ->
-    [full] DashBlocks
-   *[short] Dash
-  }
+    {$form ->
+        [full] DashBlocks
+       *[short] Dash
+    }
 
 ## Page names
 
@@ -44,54 +44,54 @@ button_open = Открыть
 ## Projects
 
 projects_dash =
-  .name = {-dash-name(form: "full")} ({-dash-name()})
-  .desc = Мод на TurboWarp, добавляющий категорию JSON, консольный режим, новые блоки, расширения, кастомизацию и другие фичи
+    .name = {-dash-name(form: "full")} ({-dash-name()})
+    .desc = Мод на TurboWarp, добавляющий категорию JSON, консольный режим, новые блоки, расширения, кастомизацию и другие фичи
 projects_stage-sc =
-  .name = Stage Size Changer (StageSC)
-  .desc = Юзерскрипт для вебсайта {-scratch-name()}, позволяющий изменять размер сцены
+    .name = Stage Size Changer (StageSC)
+    .desc = Юзерскрипт для вебсайта {-scratch-name()}, позволяющий изменять размер сцены
 projects_octatils =
-  .name = OctaTils
-  .desc = Юзерскрипт для вебсайта {-github-name()}, добавляющий несколько утилит
+    .name = OctaTils
+    .desc = Юзерскрипт для вебсайта {-github-name()}, добавляющий несколько утилит
 projects_d12-bot =
-  .name = Бот {-d12-assign-name}
-  .desc = Утилитно-развлекательный Telegram бот (Не работает на текущий момент)
+    .name = Бот {-d12-assign-name}
+    .desc = Утилитно-развлекательный Telegram бот (Не работает на текущий момент)
 projects_sfv-fix =
-  .name = {-scratch-name()} Follow Viewports Fix
-  .desc = Юзерскрипт для вебсайта {-scratch-name()}, возвращающий прежнее отображение Скретчеров в разделах "Мои подписчики" и "Подписан(а) на" на странице вашего профиля
+    .name = {-scratch-name()} Follow Viewports Fix
+    .desc = Юзерскрипт для вебсайта {-scratch-name()}, возвращающий прежнее отображение Скретчеров в разделах "Мои подписчики" и "Подписан(а) на" на странице вашего профиля
 projects_wheel-scroll =
-  .name = Wheel Scroll
-  .desc = Блоки для детекции прокрутки колёсика мыши
+    .name = Wheel Scroll
+    .desc = Блоки для детекции прокрутки колёсика мыши
 projects_pathfinding =
-  .name = Pathfinding
-  .desc = Находите пути из одной позиции в другую, обходя препятствия
+    .name = Pathfinding
+    .desc = Находите пути из одной позиции в другую, обходя препятствия
 projects_maps =
-  .name = Maps
-  .desc = Блоки для работы с Map, который более мощный чем Объект
+    .name = Maps
+    .desc = Блоки для работы с Map, который более мощный чем Объект
 projects_targets =
-  .name = Targets
-  .desc = С лёгкостью управляйте вашими спрайтами, клонами и их свойствами
+    .name = Targets
+    .desc = С лёгкостью управляйте вашими спрайтами, клонами и их свойствами
 projects_nick-survive =
-  .name = Выживание Ника
-  .desc = Игра про мальчика, выживающего в небольшом городке
+    .name = Выживание Ника
+    .desc = Игра про мальчика, выживающего в небольшом городке
 projects_notebook-clicker =
-  .name = Кликер в тетради
-  .desc = Кликер с тетрадной рисовкой
+    .name = Кликер в тетради
+    .desc = Кликер с тетрадной рисовкой
 projects_cookie-blast =
-  .name = Cookie Blast!
-  .desc = Шутер с бластером и опасными печеньками
+    .name = Cookie Blast!
+    .desc = Шутер с бластером и опасными печеньками
 projects_jumper-remake =
-  .name = Jumper Remake
-  .desc = {-scratch-name()} реализация браузерных игр "Прыгун"
+    .name = Jumper Remake
+    .desc = {-scratch-name()} реализация браузерных игр "Прыгун"
 
 ## "index" page content
 
 page-index_start-block_1 = Привет, я <nameGradient>{-d12-name()}</nameGradient>! <ogName>(англ. - {-d12-name(locale: "original")})</ogName>
 page-index_start-block_2 =
-  <h3>Я разработчик нескольких юзерскриптов, небольших игр и проектов</h3>
-  <h3>Этот вебсайт - небольшой уголок, где собраны мои личные и совместные проекты, и который является объединяющим звеном всех мест, где я есть</h3>
+    <h3>Я разработчик нескольких юзерскриптов, небольших игр и проектов</h3>
+    <h3>Этот вебсайт - небольшой уголок, где собраны мои личные и совместные проекты, и который является объединяющим звеном всех мест, где я есть</h3>
 page-index_sections_projects = {page-projects_name}
 page-index_sections_projects_more =
-  .text = Больше проектов
+    .text = Больше проектов
 page-index_sections_skills = То, что я знаю
 page-index_sections_future-skills = В плане/процессе изучения
 page-index_sections_github-stats = Моя {-github-name()} статистика
@@ -112,27 +112,27 @@ page-404_start-block_1 = Ой ёй, ошибка 404!
 page-404_start-block_2 = <h3>Здесь могла бы быть интересная страница, но {-d12-name()} не сделал её по данному URL</h3>
 page-404_start-block_3 = Так что, возвращайтесь на <indexPageLink>главную страницу сайта</indexPageLink>, либо...
 page-404_clicker-button =
-  .text =
-    {$clicks ->
-      [0] Нажмите на меня!
-      [one] {$clicks} клик
-      [few] {$clicks} клика
-     *[other] {$clicks} кликов
-    }
+    .text =
+        {$clicks ->
+            [0] Нажмите на меня!
+            [one] {$clicks} клик
+            [few] {$clicks} клика
+           *[other] {$clicks} кликов
+        }
 
 ## Component: Navigation bar
 
 navigation_logo-title =
-  .title = {website-name}
+    .title = {website-name}
 
 ## Component: Footer
 
 footer_source-code = Исходный код
 footer_socials_scratch = Я в {-scratch-name()}
 footer_socials_github =
-  .title = Я в {-github-name()}
+    .title = Я в {-github-name()}
 # In languages other than Russian, the Telegram channel should be marked as Russian
 footer_socials_telegram =
-  .title = Мой ТГК
+    .title = Мой ТГК
 footer_socials_dash =
-  .title = Я в {-dash-name()}
+    .title = Я в {-dash-name()}

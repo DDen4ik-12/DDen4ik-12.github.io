@@ -1,60 +1,60 @@
 @import "../../utils/mixins.css";
 
 @keyframes button_anim {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-0.4rem);
-  }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.4rem);
+    }
 }
 
 .footer {
-  @mixin box-style;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0.5rem;
-  padding: 1rem;
-  gap: 1rem;
-  border-radius: 0.5rem;
+    @mixin box-style;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 0.5rem;
 }
 .footer > * {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
 }
 .logo {
-  height: 2rem;
+    height: 2rem;
 }
 .button-main {
-  display: flex;
-  align-items: center;
-  background: var(--ui-main-40);
-  border-bottom: 0.125rem solid var(--ui-black-dim);
-  border-radius: 0.5rem;
-  padding: 0.65rem 1rem;
-  width: fit-content;
-  box-shadow: var(--ui-shadow);
-  transition: 0.5s;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: var(--ui-main-40);
+    border-bottom: 0.125rem solid var(--ui-black-dim);
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    width: fit-content;
+    box-shadow: var(--ui-shadow);
+    transition: 0.5s;
+    cursor: pointer;
 }
 .button-img {
-  width: 2rem;
-  height: 2rem;
+    width: 2rem;
+    height: 2rem;
 }
 .icon-white {
-  filter: var(--white-icon-filter);
+    filter: var(--white-icon-filter);
 }
 .button-main:hover {
-  background: var(--ui-main-60);
+    background: var(--ui-main-60);
 }
 .button-main:hover > .button-img {
-  animation: 0.5s button_anim cubic-bezier(0.07, 0.96, 0.37, 2.07);
+    animation: 0.5s button_anim cubic-bezier(0.07, 0.96, 0.37, 2.07);
 }
 .button-main:active {
-  box-shadow: var(--ui-intense-shadow);
+    box-shadow: var(--ui-intense-shadow);
 }

@@ -10,81 +10,81 @@ import telegramLogo from "./telegramLogo.svg";
 import dashLogo from "/assets/dashLogoMini.svg";
 
 function FooterButton(props) {
-  const main = (
-    <div
-      className={styles.buttonMain}
-      role="button"
-      title={props.title}
-    >
-      <img
-        className={classNames(styles.buttonImg, props.imgClassName)}
-        src={props.imgSrc}
-      />
-    </div>
-  );
-  return props.href === undefined ? main : (
-    <a href={props.href}>
-      {main}
-    </a>
-  );
+    const main = (
+        <div
+            className={styles.buttonMain}
+            role="button"
+            title={props.title}
+        >
+            <img
+                className={classNames(styles.buttonImg, props.imgClassName)}
+                src={props.imgSrc}
+            />
+        </div>
+    );
+    return props.href === undefined ? main : (
+        <a href={props.href}>
+            {main}
+        </a>
+    );
 };
 function Footer() {
-  return (
-    <footer className={styles.footer}>
-      <div>
-        <img className={styles.logo} src={siteLogo} />
-        <Localized id="website-name">
-          <></>
-        </Localized>
-      </div>
-      <div>
-        <Localized
-          id="footer_socials_github"
-          attrs={{ title: true }}
-        >
-          <FooterButton
-            imgClassName={styles.iconWhite}
-            imgSrc={githubLogo}
-            href="https://github.com/DDen4ik-12"
-          />
-        </Localized>
-        <Localized
-          id="footer_socials_telegram"
-          attrs={{ title: true }}
-        >
-          <FooterButton
-            imgClassName={styles.iconWhite}
-            imgSrc={telegramLogo}
-            href="https://t.me/d_den4ik_12_base"
-          />
-        </Localized>
-        <Localized
-          id="footer_socials_dash"
-          attrs={{ title: true }}
-        >
-          <FooterButton
-            imgClassName={styles.iconWhite}
-            imgSrc={dashLogo}
-            href="https://dashblocks.github.io/user#Den4ik-12"
-          />
-        </Localized>
-      </div>
-      <div>
-        <Localized id="footer_source-code">
-          <a
-            className={mainStyles.link}
-            href="https://github.com/DDen4ik-12/DDen4ik-12.github.io"
-          />
-        </Localized>
-        <Localized id="footer_socials_scratch">
-          <a
-            className={mainStyles.link}
-            href="https://scratch.mit.edu/users/Den4ik-12"
-          />
-        </Localized>
-      </div>
-    </footer>
-  );
+    return (
+        <footer className={styles.footer}>
+            <div>
+                <img className={styles.logo} src={siteLogo} />
+                <Localized id="website-name">
+                    <></>
+                </Localized>
+            </div>
+            <div>
+                <Localized
+                    id="footer_socials_github"
+                    attrs={{ title: true }}
+                >
+                    <FooterButton
+                        imgClassName={styles.iconWhite}
+                        imgSrc={githubLogo}
+                        href="https://github.com/DDen4ik-12"
+                    />
+                </Localized>
+                <Localized
+                    id="footer_socials_telegram"
+                    attrs={{ title: true }}
+                >
+                    <FooterButton
+                        imgClassName={styles.iconWhite}
+                        imgSrc={telegramLogo}
+                        href="https://t.me/d_den4ik_12_base"
+                    />
+                </Localized>
+                <Localized
+                    id="footer_socials_dash"
+                    attrs={{ title: true }}
+                >
+                    <FooterButton
+                        imgClassName={styles.iconWhite}
+                        imgSrc={dashLogo}
+                        href="https://dashblocks.github.io/user#Den4ik-12"
+                    />
+                </Localized>
+            </div>
+            <div>
+                <Localized id="footer_source-code">
+                    <a
+                        className={mainStyles.link}
+                        href="https://github.com/DDen4ik-12/DDen4ik-12.github.io"
+                    />
+                </Localized>
+                <Localized id="footer_socials_scratch">
+                    <a
+                        className={mainStyles.link}
+                        href="https://scratch.mit.edu/users/Den4ik-12"
+                    />
+                </Localized>
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;
